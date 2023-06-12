@@ -151,7 +151,7 @@
 	overflow: visible;
 	--web-animation: fadein undefineds undefined;
 	--web-action-type: page;
-	--web-action-target: home.html;
+	--web-action-target: index.html;
 	cursor: pointer;
 }
 #Icon_ionic-ios-arrow-back_ds {
