@@ -15,10 +15,14 @@
 	box-sizing: border-box;
 	border: none;
 }
+body { min-height: 100vh; }
+
 #Artboard {
 	position: absolute;
-	width: 360px;
-	height: 669px;
+	/* width: 360px; */
+	height : 100%;
+	width : 100%;
+	/* height: 669px; */
 	background-color: rgba(25,25,25,1);
 	overflow: hidden;
 	--web-view-name: 메인화면;
@@ -44,18 +48,20 @@
 .n_176 {
 	position: absolute;
 	overflow: visible;
-	width: 360px;
-	height: 94px;
+	width: 100%;
+	height: 14%;
 	left: 0px;
 	top: 0px;
 }
 #Text {
-	left: 171px;
-	top: 38px;
+	/* left: 171px;
+	top: 38px; */
+	top: 5%;
+	left: 0px;
 	position: absolute;
 	overflow: visible;
-	width: 20px;
-	height: 29px;
+	width: 100%;
+	height: 14%;
 	text-align: center;
 	font-family: Noto Sans KR;
 	font-style: normal;
