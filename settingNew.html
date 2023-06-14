@@ -14,6 +14,7 @@
 		<rect id="n_176" rx="0" ry="0" x="0" y="0" width="100%" height="100%">
 		</rect>
 	</svg>
+	<!-- <div class="wrap"> -->
 	<div onclick="application.goToTargetView(event)" id="n_609">
 		<svg class="n_7634_e" viewBox="0 0 296 72">
 			<linearGradient id="n_7634_e" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
@@ -27,6 +28,7 @@
 			<span>화면 설정</span>
 		</div>
 	</div>
+	<!-- </div> -->
 
 	<div onclick="application.goToTargetView(event)" id="Icon_ionic-ios-arrow-back">
 		<svg class="Icon_ionic-ios-arrow-back_fd" viewBox="11.251 6.194 13.503 23.619">
@@ -73,14 +75,15 @@
 
 <script>
 var load_background_status = localStorage.getItem("background_status");
-if (load_background_status==="Black")
+console.log(load_background_status);
+if (load_background_status==="white")
 {
 document.getElementById("n__6").style.backgroundColor = "White";
 document.getElementById("n__fw").style.color = "#191919";
 document.getElementById("Text_fx").style.color = "#191919";
 document.getElementById("n_176").style.fill = "#F3F3F3";
 }
-if (load_background_status ==="White"){
+if (load_background_status ==="Black"){
 document.getElementById("n__6").style.backgroundColor = "rgba(13,13,13,1)";
 document.getElementById("n__fw").style.color = "rgba(243,243,252,1)";
 document.getElementById("Text_fx").style.color = "rgba(166,175,175,1)";

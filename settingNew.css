@@ -17,7 +17,7 @@ body{min-height : 100vh;}
 	font-style: normal;
 	font-weight: bold;
 	font-size: 5px;
-	color: rgba(243, 243, 252, 0.5);
+	color: rgba(243, 243, 252, 0);
 	--web-animation: fadein undefineds undefined;
 	--web-action-type: page;
 	--web-action-target: index.html;
@@ -46,6 +46,7 @@ body{min-height : 100vh;}
 }
 #n__6 {
 	position: absolute;
+	/* margin: auto; */
 	/* width: 360px;
 	height: 669px; */
 	width: 100%;
@@ -58,6 +59,7 @@ body{min-height : 100vh;}
 	--web-scale-to-fit-type: fit;
 	--web-scale-on-resize: true;
 	--web-enable-deep-linking: true;
+
 }
 #n_176 {
 	fill: rgba(25,25,25,1);
@@ -72,27 +74,46 @@ body{min-height : 100vh;}
 	left: 0px;
 	top: 0px;
 }
-#n_609 {
-	position: absolute;
+/* .wrap { 
+	margin:auto; 
+	text-align:center;
 	width: 296px;
 	height: 72px;
-	left: 8%;
+	top: 29%;
+} */
+#n_609 {
+	width: 296px;
+	/* width: 82%; */
+	position: absolute;
+	height: 72px;
 	top: 29%;
 	overflow: visible;
 	--web-animation: fadein undefineds undefined;
 	--web-action-type: page;
 	--web-action-target: set/colorChange_dq.html;
-	cursor: pointer;
+	
+	left: 17%;
+    /* transform: translateX(10%); */
 }
 #n_7634_e {
 	fill: url(#n_7634_e);
 }
 .n_7634_e {
+	margin-left: auto;
+	margin-right: auto;
+
+	/* text-align: center; */
+	/* display: flex;
+    justify-content: center;
+    align-items: center; */
 	overflow: visible;
 	position: absolute;
 	width: 296px;
 	height: 72px;
-	left: 0%;
+	/* left: 8%; */
+	/* left: 0%; */
+	/* margin-left: auto;
+	margin-right: auto; */
 	top: 0px;
 	transform: matrix(1,0,0,1,0,0);
 }
