@@ -81,7 +81,7 @@ body{min-height : 100vh;}
 	overflow: visible;
 	--web-animation: fadein undefineds undefined;
 	--web-action-type: page;
-	--web-action-target: colorChange_dq.html;
+	--web-action-target: set/colorChange_dq.html;
 	cursor: pointer;
 }
 #n_7634_e {
