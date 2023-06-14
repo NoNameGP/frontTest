@@ -1,42 +1,15 @@
-
-
-
-/* 배경 비율 100으로 늘리기 */
-body{min-height : 100vh;}
-
-/* 뒤로가기 아이콘 뒤 글자 */
-#new {
-	top: 5%;
-	left : 1%;
-	position: absolute;
-	overflow: visible;
-	width: 25px;
-	height: 10px;
-	text-align: center;
-	font-family: Noto Sans KR;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 5px;
-	color: rgba(243, 243, 252, 0);
-	--web-animation: fadein undefineds undefined;
-	--web-action-type: page;
-	--web-action-target: index.html;
-	cursor: pointer;
-}
-
-
-
+body {min-height : 100vh;}
 
 .mediaViewInfo {
-	--web-view-name: 환경설정 – 6;
-	--web-view-id: n__6;
+	--web-view-name: 출발지 설정;
+	--web-view-id: n_;
 	--web-scale-to-fit: true;
 	--web-scale-to-fit-type: fit;
 	--web-scale-on-resize: true;
 	--web-enable-deep-linking: true;
 }
 :root {
-	--web-view-ids: n__6;
+	--web-view-ids: n_;
 }
 * {
 	margin: 0;
@@ -44,130 +17,57 @@ body{min-height : 100vh;}
 	box-sizing: border-box;
 	border: none;
 }
-#n__6 {
+#n_ {
 	position: absolute;
-	/* margin: auto; */
-	/* width: 360px;
-	height: 669px; */
 	width: 100%;
 	height: 100%;
 	background-color: rgba(13,13,13,1);
 	overflow: hidden;
-	--web-view-name: 환경설정 – 6;
-	--web-view-id: n__6;
+	--web-view-name: 출발지 설정;
+	--web-view-id: n_;
 	--web-scale-to-fit: true;
 	--web-scale-to-fit-type: fit;
 	--web-scale-on-resize: true;
 	--web-enable-deep-linking: true;
+}
+
+@keyframes fadein {
+
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 
 }
 #n_176 {
 	fill: rgba(25,25,25,1);
-	
 }
 .n_176 {
 	position: absolute;
-
 	overflow: visible;
-	width: 100%;
-	height: 14%;
+	width: 360px;
+	height: 94px;
 	left: 0px;
 	top: 0px;
 }
-
-/* #n_609 { */
-	/* width: 296px; */
-	/* width: 82%; */
-	/* width: (100% - 60px); */
-	/* width: 100%;
-	position: absolute;
-	height: 72px;
-	top: 29%;
-	overflow: visible;
-	--web-animation: fadein undefineds undefined;
-	--web-action-type: page;
-	--web-action-target: set/colorChange_dq.html; */
-/* 	
-	left: 30px; */
-
-    /* transform: translateX(10%); */
-/* } */
-
-#n_609 {
-	fill: #93FBFF;
-}
-.n_609 {
-	width: calc(100% - 60px);
-	position: absolute;
-	overflow: visible;
-	/* width: 288px; */
-	height: 72px;
-	left: 30px;
-	overflow: visible;
-
-	top: 29%;
-	--web-animation: fadein undefineds undefined;
-	--web-action-type: page;
-	--web-action-target: set/colorChange_dq.html;
-	cursor: pointer;
-}
-
-#n_7634_e {
-	fill: url(#n_7634_e);
-}
-.n_7634_e {
-
-left: 30px;
-width: calc(100% - 60px);
-	/* text-align: center; */
-	/* display: flex;
-    justify-content: center;
-    align-items: center; */
-	overflow: visible;
-	position: absolute;
-	/* width: 296px; */
-	height: 72px;
-	/* left: 8%; */
-	/* left: 0%; */
-	/* margin-left: auto;
-	margin-right: auto; */
-	top: 0px;
-	transform: matrix(1,0,0,1,0,0);
-}
-#n_ {
-	left: 100px;
-	top : 32%;
-
-	width: calc(100% - 200px);
-	position: absolute;
-	overflow: visible;
-	/* width: 102px; */
-
-	height: 32px;
-
-	text-align: center;
-	font-family: Noto Sans KR;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 22px;
-	color: rgba(25,25,25,1);
-	--web-animation: fadein undefineds undefined;
-	--web-action-type: page;
-	--web-action-target: set/colorChange_dq.html;
-	cursor: pointer;
-}
-#n_610 {
+#n_56 {
 	position: absolute;
 	width: 296px;
 	height: 72px;
 	left: 32px;
-	top: 291px;
+	top: 114px;
 	overflow: visible;
+	--web-animation: fadein undefineds undefined;
+	--web-action-type: page;
+	--web-action-target: start_navi/map_gps.html;
+	cursor: pointer;
 }
-#n_18 {
+#n_15 {
 	fill: rgba(216,255,247,1);
 }
-.n_18 {
+.n_15 {
 	position: absolute;
 	overflow: visible;
 	width: 296px;
@@ -176,6 +76,81 @@ width: calc(100% - 60px);
 	top: 0px;
 }
 #Text {
+	left: 118px;
+	top: 20px;
+	position: absolute;
+	overflow: visible;
+	width: 62px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Noto Sans KR;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 22px;
+	color: rgba(25,25,25,1);
+}
+#n_55 {
+	position: absolute;
+	width: 296px;
+	height: 72px;
+	left: 32px;
+	top: 206px;
+	overflow: visible;
+	--web-animation: fadein undefineds undefined;
+	--web-action-type: page;
+	--web-action-target: start_navi/voice.html;
+	cursor: pointer;
+}
+#n_15_dv {
+	fill: rgba(216,255,247,1);
+}
+.n_15_dv {
+	position: absolute;
+	overflow: visible;
+	width: 296px;
+	height: 72px;
+	left: 0px;
+	top: 0px;
+}
+#Text_dw {
+	left: 108px;
+	top: 20px;
+	position: absolute;
+	overflow: visible;
+	width: 82px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Noto Sans KR;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 22px;
+	color: rgba(25,25,25,1);
+}
+#n_10526 {
+	position: absolute;
+	width: 296px;
+	height: 72px;
+	left: 32px;
+	top: 298px;
+	overflow: visible;
+	transition: all 0.20000000298023224s linear;
+	--web-animation: fadein 0.20000000298023224s linear;
+	--web-action-type: page;
+	--web-action-target: start_navi/start_text.html;
+	cursor: pointer;
+}
+#n_15_dy {
+	fill: rgba(216,255,247,1);
+}
+.n_15_dy {
+	position: absolute;
+	overflow: visible;
+	width: 296px;
+	height: 72px;
+	left: 0px;
+	top: 0px;
+}
+#Text_dz {
 	left: 108px;
 	top: 20px;
 	position: absolute;
@@ -193,18 +168,19 @@ width: calc(100% - 60px);
 	position: absolute;
 	width: 13.503px;
 	height: 23.619px;
-	left: 2%;
-	top: 5%;
+	left: 10px;
+	top: 41px;
 	overflow: visible;
-	--web-animation: fadein undefineds undefined;
+	transition: all 0.4000000059604645s ease-in;
+	--web-animation: fadein 0.4000000059604645s ease-in;
 	--web-action-type: page;
 	--web-action-target: index.html;
 	cursor: pointer;
 }
-#Icon_ionic-ios-arrow-back_fd {
+#Icon_ionic-ios-arrow-back_d {
 	fill: rgba(166,175,175,1);
 }
-.Icon_ionic-ios-arrow-back_fd {
+.Icon_ionic-ios-arrow-back_d {
 	overflow: visible;
 	position: absolute;
 	width: 13.503px;
@@ -213,7 +189,21 @@ width: calc(100% - 60px);
 	top: 0px;
 	transform: matrix(1,0,0,1,0,0);
 }
-#n__1__143 {
+#n__d {
+	left: 132px;
+	top: 38px;
+	position: absolute;
+	overflow: visible;
+	width: 98px;
+	height: 29px;
+	text-align: center;
+	font-family: Noto Sans KR;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(243,243,252,1);
+}
+#n__1__9 {
 	position: absolute;
 	width: 79.271px;
 	height: 14.59px;
@@ -244,7 +234,7 @@ width: calc(100% - 60px);
 .n_156 {
 	position: absolute;
 	overflow: visible;
-	width: 34.361px;
+	width: 34.362px;
 	height: 11.796px;
 	left: 0px;
 	top: 2.794px;
@@ -293,7 +283,7 @@ width: calc(100% - 60px);
 	position: absolute;
 	width: 7.731px;
 	height: 10.321px;
-	left: 3.583px;
+	left: 3.582px;
 	top: 0.794px;
 	transform: matrix(1,0,0,1,0,0);
 }
@@ -353,7 +343,7 @@ width: calc(100% - 60px);
 .n_2150 {
 	overflow: visible;
 	position: absolute;
-	width: 7.888px;
+	width: 7.887px;
 	height: 3.17px;
 	left: 4.144px;
 	top: 6.344px;
@@ -437,7 +427,6 @@ width: calc(100% - 60px);
 	height: 5.433px;
 	left: 3px;
 	top: 5.541px;
-
 	transform: matrix(1,0,0,1,0,0);
 }
 #n_11 {
@@ -457,104 +446,4 @@ width: calc(100% - 60px);
 	left: 6px;
 	top: 2.575px;
 	transform: matrix(1,0,0,1,0,0);
-}
-#n__fw {
-	/* left: 35px;
-	top: 127px; */
-	left : 10%;
-	top : 20%;
-	position: absolute;
-	overflow: visible;
-	width: 119px;
-	white-space: nowrap;
-	text-align: center;
-	font-family: Noto Sans KR;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 30px;
-	color: rgba(243,243,252,1);
-}
-#Text_fx {
-	/* left: 194px;
-	top: 147px; */
-	left : 54%;
-	top : 22%;
-	position: absolute;
-	overflow: visible;
-	width: 89px;
-	white-space: nowrap;
-	text-align: center;
-	font-family: Noto Sans KR;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 16px;
-	color: rgba(166,175,175,1);
-}
-#n_10561 {
-	position: absolute;
-	width: 30px;
-	height: 24px;
-	/* left: 294px;
-	top: 147px; */
-	left: 81%;
-	top : 22%;
-	overflow: visible;
-}
-#n_190 {
-	fill: rgba(255,231,62,1);
-}
-.n_190 {
-	position: absolute;
-	overflow: visible;
-	width: 30px;
-	height: 24px;
-	left: 0px;
-	top: 0px;
-}
-#n_602 {
-	position: absolute;
-	width: 16.302px;
-	height: 15.061px;
-	left: 7.385px;
-	top: 4.615px;
-	overflow: visible;
-}
-#n_601 {
-	position: absolute;
-	width: 16.302px;
-	height: 15.061px;
-	left: 0px;
-	top: 0px;
-	overflow: visible;
-}
-#n_600 {
-	position: absolute;
-	width: 16.302px;
-	height: 15.061px;
-	left: 0px;
-	top: 0px;
-	overflow: visible;
-}
-#n_2 {
-	fill: rgba(49,34,39,1);
-}
-.n_2 {
-	overflow: visible;
-	position: absolute;
-	width: 16.302px;
-	height: 15.061px;
-	left: 0px;
-	top: 0px;
-	transform: matrix(1,0,0,1,0,0);
-}
-#n_12 {
-	fill: rgba(147,251,255,1);
-}
-.n_12 {
-	position: absolute;
-	overflow: visible;
-	width: 40px;
-	height: 40px;
-	left: 44%;
-	top: 5%;
 }

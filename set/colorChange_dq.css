@@ -50,6 +50,7 @@ body {min-height : 100vh;}
 	--web-scale-to-fit-type: fit;
 	--web-scale-on-resize: true;
 	--web-enable-deep-linking: true;
+	
 }
 @keyframes fadein {
 
@@ -376,11 +377,13 @@ body {min-height : 100vh;}
 	fill: rgba(54,54,54,1);
 }
 .n_209 {
+	width: calc(100% - 72px);
 	position: absolute;
 	overflow: visible;
-	width: 288px;
+	/* width: 288px; */
 	height: 181px;
 	left: 36px;
+
 	top: 106px;
 }
 #Text {
@@ -413,11 +416,12 @@ body {min-height : 100vh;}
 }
 #n_10572 {
 	position: absolute;
-	width: 120px;
+	
 	height: 108px;
 	left: 52px;
 	top: 165px;
 	overflow: visible;
+
 }
 #n_208 {
 	fill: rgba(25,25,25,1);
@@ -489,7 +493,7 @@ body {min-height : 100vh;}
 }
 #n_10573 {
 	position: absolute;
-	width: 120px;
+
 	height: 108px;
 	left: 188px;
 	top: 165px;
@@ -498,6 +502,8 @@ body {min-height : 100vh;}
 	--web-action-type: page;
 	--web-action-target: ____________1.html;
 	cursor: pointer;
+	
+
 }
 #n_10562 {
 	position: absolute;
