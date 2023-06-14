@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>환경설정 – 6</title>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="settingNew.css"/>
+<script id="applicationScript" type="text/javascript" src="settingNew.js"></script>
+</head>
+<body>
+<div id="n__6">
+	<svg class="n_176">
+		<rect id="n_176" rx="0" ry="0" x="0" y="0" width="100%" height="100%">
+		</rect>
+	</svg>
+	<div onclick="application.goToTargetView(event)" id="n_609">
+		<svg class="n_7634_e" viewBox="0 0 296 72">
+			<linearGradient id="n_7634_e" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+				<stop offset="0" stop-color="#93fbff" stop-opacity="1"></stop>
+				<stop offset="1" stop-color="#93ffea" stop-opacity="1"></stop>
+			</linearGradient>
+			<path id="n_7634_e" d="M 15 0 L 281 0 C 289.2842712402344 0 296 6.715728759765625 296 15 L 296 57 C 296 65.28427124023438 289.2842712402344 72 281 72 L 15 72 C 6.715728759765625 72 0 65.28427124023438 0 57 L 0 15 C 0 6.715728759765625 6.715728759765625 0 15 0 Z">
+			</path>
+		</svg>
+		<div id="n_">
+			<span>화면 설정</span>
+		</div>
+	</div>
+
+	<div onclick="application.goToTargetView(event)" id="Icon_ionic-ios-arrow-back">
+		<svg class="Icon_ionic-ios-arrow-back_fd" viewBox="11.251 6.194 13.503 23.619">
+			<path id="Icon_ionic-ios-arrow-back_fd" d="M 15.32109355926514 18 L 24.2578125 9.0703125 C 24.91875076293945 8.409375190734863 24.91875076293945 7.340624809265137 24.2578125 6.686718940734863 C 23.59687423706055 6.025781631469727 22.52812576293945 6.032812595367432 21.8671875 6.686718940734863 L 11.7421875 16.8046875 C 11.10234355926514 17.44453048706055 11.08828163146973 18.47109413146973 11.69296836853027 19.13203048706055 L 21.86015701293945 29.3203125 C 22.19062614440918 29.65078163146973 22.62656402587891 29.8125 23.05546951293945 29.8125 C 23.484375 29.8125 23.92031288146973 29.65078163146973 24.25078201293945 29.3203125 C 24.91172027587891 28.65937423706055 24.91172027587891 27.59062576293945 24.25078201293945 26.93671798706055 L 15.32109355926514 18 Z">
+			</path>
+		</svg>
+	</div>
+	</div>
+
+	<!-- 아이콘 뒤 뒤로가기 텍스트 -->
+	<div onclick="application.goToTargetView(event)" id = "new">
+		<span>뒤로
+			<br>가기
+		</span> 
+	</div>
+
+	<div id="n__fw">
+		<span>김덕성 님</span>
+	</div>
+	<div id="Text_fx">
+		<span>카카오로그인</span>
+	</div>
+	<div id="n_10561">
+		<svg class="n_190">
+			<rect id="n_190" rx="10" ry="10" x="0" y="0" width="30" height="24">
+			</rect>
+		</svg>
+		<div id="n_602">
+			<div id="n_601">
+				<div id="n_600">
+					<svg class="n_2" viewBox="668.062 374.178 16.302 15.061">
+						<path id="n_2" d="M 674.7914428710938 387.0399780273438 C 674.7914428710938 387.0399780273438 675.7281494140625 387.1384887695312 676.2129516601562 387.1384887695312 C 680.7145385742188 387.1384887695312 684.36376953125 384.236572265625 684.36376953125 380.6579284667969 C 684.36376953125 377.0792846679688 680.7145385742188 374.177978515625 676.2129516601562 374.177978515625 C 671.7106323242188 374.177978515625 668.06201171875 377.0792846679688 668.06201171875 380.6579284667969 C 668.06201171875 382.8766479492188 669.4639892578125 384.8341979980469 671.6017456054688 386.0022277832031 C 671.6017456054688 386.0022277832031 671.3126831054688 387.5526733398438 669.6967163085938 389.0376586914062 C 669.6967163085938 389.0376586914062 669.5372924804688 389.3202819824219 670.0162353515625 389.2152709960938 C 670.4959716796875 389.1095581054688 673.4762573242188 388.0485229492188 674.7914428710938 387.0399780273438 Z">
+						</path>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</div>
+	<svg class="n_12">
+		<rect id="n_12" rx="15" ry="15" x="0" y="0" width="40" height="40">
+		</rect>
+	</svg>
+</div>
+
+<script>
+var load_background_status = localStorage.getItem("background_status");
+if (load_background_status==="Black")
+{
+document.getElementById("n__6").style.backgroundColor = "White";
+document.getElementById("n__fw").style.color = "#191919";
+document.getElementById("Text_fx").style.color = "#191919";
+document.getElementById("n_176").style.fill = "#F3F3F3";
+}
+if (load_background_status ==="White"){
+document.getElementById("n__6").style.backgroundColor = "rgba(13,13,13,1)";
+document.getElementById("n__fw").style.color = "rgba(243,243,252,1)";
+document.getElementById("Text_fx").style.color = "rgba(166,175,175,1)";
+document.getElementById("n_176").style.fill = "rgba(25,25,25,1)";
+}
+
+</script>
+</body>
+</html>

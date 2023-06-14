@@ -157,7 +157,7 @@ body { min-height: 100vh; }
 	transition: all 0.20000000298023224s linear;
 	--web-animation: fadein 0.20000000298023224s linear;
 	--web-action-type: page;
-	--web-action-target: setting.html;
+	--web-action-target: settingNew.html;
 	cursor: pointer;
 }
 #n_17_dv {

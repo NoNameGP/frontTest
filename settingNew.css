@@ -1,13 +1,42 @@
+
+
+
+/* 배경 비율 100으로 늘리기 */
+body{min-height : 100vh;}
+
+/* 뒤로가기 아이콘 뒤 글자 */
+#new {
+	top: 5%;
+	left : 1%;
+	position: absolute;
+	overflow: visible;
+	width: 25px;
+	height: 10px;
+	text-align: center;
+	font-family: Noto Sans KR;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 5px;
+	color: rgba(243, 243, 252, 0.5);
+	--web-animation: fadein undefineds undefined;
+	--web-action-type: page;
+	--web-action-target: index.html;
+	cursor: pointer;
+}
+
+
+
+
 .mediaViewInfo {
-	--web-view-name: 환경설정;
-	--web-view-id: Artboard;
+	--web-view-name: 환경설정 – 6;
+	--web-view-id: n__6;
 	--web-scale-to-fit: true;
 	--web-scale-to-fit-type: fit;
 	--web-scale-on-resize: true;
 	--web-enable-deep-linking: true;
 }
 :root {
-	--web-view-ids: Artboard;
+	--web-view-ids: n__6;
 }
 * {
 	margin: 0;
@@ -15,92 +44,70 @@
 	box-sizing: border-box;
 	border: none;
 }
-#Artboard {
+#n__6 {
 	position: absolute;
-	width: 360px;
-	height: 669px;
-	background-color: rgba(25,25,25,1);
+	/* width: 360px;
+	height: 669px; */
+	width: 100%;
+	height: 100%;
+	background-color: rgba(13,13,13,1);
 	overflow: hidden;
-	--web-view-name: 환경설정;
-	--web-view-id: Artboard;
+	--web-view-name: 환경설정 – 6;
+	--web-view-id: n__6;
 	--web-scale-to-fit: true;
 	--web-scale-to-fit-type: fit;
 	--web-scale-on-resize: true;
 	--web-enable-deep-linking: true;
 }
-@keyframes fadein {
-
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-
-}
-
 #n_176 {
 	fill: rgba(25,25,25,1);
+	
 }
 .n_176 {
 	position: absolute;
+
 	overflow: visible;
-	width: 360px;
-	height: 94px;
+	width: 100%;
+	height: 14%;
 	left: 0px;
 	top: 0px;
-}
-#Text {
-	left: 142px;
-	top: 38px;
-	position: absolute;
-	overflow: visible;
-	width: 77px;
-	height: 29px;
-	text-align: center;
-	font-family: Noto Sans KR;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 20px;
-	color: rgba(243,243,252,1);
 }
 #n_609 {
 	position: absolute;
 	width: 296px;
 	height: 72px;
-	left: 32px;
-	top: 212px;
+	left: 8%;
+	top: 29%;
 	overflow: visible;
-	transition: all 0.30000001192092896s ease-in-out;
-	--web-animation: fadein 0.30000001192092896s ease-in-out;
+	--web-animation: fadein undefineds undefined;
 	--web-action-type: page;
-	--web-action-target: set/colorChange_dq.html;
+	--web-action-target: colorChange_dq.html;
 	cursor: pointer;
 }
-#n_15 {
-	fill: rgba(216,255,247,1);
+#n_7634_e {
+	fill: url(#n_7634_e);
 }
-.n_15 {
-	position: absolute;
+.n_7634_e {
 	overflow: visible;
+	position: absolute;
 	width: 296px;
 	height: 72px;
-	left: 0px;
+	left: 0%;
 	top: 0px;
-	
+	transform: matrix(1,0,0,1,0,0);
 }
 #n_ {
-	left: 108px;
-	top: 22px;
+	left: 98px;
+	top: 20px;
 	position: absolute;
 	overflow: visible;
-	width: 81px;
-	height: 29px;
-	text-align: left;
+	width: 102px;
+	height: 32px;
+	text-align: center;
 	font-family: Noto Sans KR;
 	font-style: normal;
-	font-weight: normal;
-	font-size: 20px;
+	font-weight: bold;
+	font-size: 22px;
 	color: rgba(25,25,25,1);
 }
 #n_610 {
@@ -108,13 +115,8 @@
 	width: 296px;
 	height: 72px;
 	left: 32px;
-	top: 308px;
+	top: 291px;
 	overflow: visible;
-	transition: all 0.30000001192092896s ease-in-out;
-	--web-animation: fadein 0.30000001192092896s ease-in-out;
-	--web-action-type: page;
-	--web-action-target: set/audio_information.html;
-	cursor: pointer;
 }
 #n_18 {
 	fill: rgba(216,255,247,1);
@@ -127,37 +129,36 @@
 	left: 0px;
 	top: 0px;
 }
-#Text_dq {
-	left: 111px;
-	top: 22px;
+#Text {
+	left: 108px;
+	top: 20px;
 	position: absolute;
 	overflow: visible;
-	width: 75px;
-	height: 29px;
+	width: 82px;
+	white-space: nowrap;
 	text-align: left;
 	font-family: Noto Sans KR;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 20px;
+	font-size: 22px;
 	color: rgba(25,25,25,1);
-	cursor: pointer;
 }
 #Icon_ionic-ios-arrow-back {
 	position: absolute;
 	width: 13.503px;
 	height: 23.619px;
-	left: 10px;
-	top: 41px;
+	left: 2%;
+	top: 5%;
 	overflow: visible;
 	--web-animation: fadein undefineds undefined;
 	--web-action-type: page;
 	--web-action-target: index.html;
 	cursor: pointer;
 }
-#Icon_ionic-ios-arrow-back_ds {
+#Icon_ionic-ios-arrow-back_fd {
 	fill: rgba(166,175,175,1);
 }
-.Icon_ionic-ios-arrow-back_ds {
+.Icon_ionic-ios-arrow-back_fd {
 	overflow: visible;
 	position: absolute;
 	width: 13.503px;
@@ -166,7 +167,7 @@
 	top: 0px;
 	transform: matrix(1,0,0,1,0,0);
 }
-#n__1__19 {
+#n__1__143 {
 	position: absolute;
 	width: 79.271px;
 	height: 14.59px;
@@ -390,6 +391,7 @@
 	height: 5.433px;
 	left: 3px;
 	top: 5.541px;
+
 	transform: matrix(1,0,0,1,0,0);
 }
 #n_11 {
@@ -410,9 +412,11 @@
 	top: 2.575px;
 	transform: matrix(1,0,0,1,0,0);
 }
-#n__eb {
-	left: 32px;
-	top: 125px;
+#n__fw {
+	/* left: 35px;
+	top: 127px; */
+	left : 10%;
+	top : 20%;
 	position: absolute;
 	overflow: visible;
 	width: 119px;
@@ -424,9 +428,11 @@
 	font-size: 30px;
 	color: rgba(243,243,252,1);
 }
-#Text_ec {
-	left: 194px;
-	top: 145px;
+#Text_fx {
+	/* left: 194px;
+	top: 147px; */
+	left : 54%;
+	top : 22%;
 	position: absolute;
 	overflow: visible;
 	width: 89px;
@@ -442,8 +448,10 @@
 	position: absolute;
 	width: 30px;
 	height: 24px;
-	left: 294px;
-	top: 145px;
+	/* left: 294px;
+	top: 147px; */
+	left: 81%;
+	top : 22%;
 	overflow: visible;
 }
 #n_190 {
@@ -493,14 +501,14 @@
 	top: 0px;
 	transform: matrix(1,0,0,1,0,0);
 }
-#n_210 {
-	fill: rgba(101,101,101,1);
+#n_12 {
+	fill: rgba(147,251,255,1);
 }
-.n_210 {
+.n_12 {
 	position: absolute;
 	overflow: visible;
-	width: 296px;
-	height: 1px;
-	left: 32px;
-	top: 182px;
+	width: 40px;
+	height: 40px;
+	left: 44%;
+	top: 5%;
 }
