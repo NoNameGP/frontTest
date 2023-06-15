@@ -134,6 +134,7 @@ width: calc(100% - 60px);
 	top: 0px;
 	transform: matrix(1,0,0,1,0,0);
 }
+
 #n_ {
 	left: 100px;
 	top : 32%;
@@ -156,6 +157,7 @@ width: calc(100% - 60px);
 	--web-action-target: set/colorChange_dq.html;
 	cursor: pointer;
 }
+
 #n_610 {
 	position: absolute;
 	width: 296px;
