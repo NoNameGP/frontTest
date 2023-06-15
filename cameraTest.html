@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>웹캠 스트리밍</title>
+    <style>
+      #videoElement {
+        width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <video autoplay="true" id="videoElement"></video>
+    <script>
+      navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function (stream) {
+          var video = document.getElementById('videoElement');
+          video.srcObject = stream;
+        })
+        .catch(function (error) {
+          console.log('웹캠 스트림을 가져올 수 없습니다: ', error);
+        });
+    </script>
+  </body>
+</html>
