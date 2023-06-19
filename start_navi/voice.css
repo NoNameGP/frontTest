@@ -1,42 +1,13 @@
-body {min-height : 100vh;}
-#new {
-	top: 5%;
-	left : 1%;
-	position: absolute;
-	overflow: visible;
-	width: 25px;
-	height: 10px;
-	text-align: center;
-	font-family: Noto Sans KR;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 5px;
-	color: rgba(243, 243, 252, 0);
-	--web-animation: fadein undefineds undefined;
-	--web-action-type: page;
-	--web-action-target:  destination_text.html;
-	cursor: pointer;
-}
-
-#map_div{
-	position: absolute;
-	top: 150px;
-	left: 35px;
-}
-
-
-
-
 .mediaViewInfo {
-	--web-view-name: 출발지 설정 - 끝 – 5;
-	--web-view-id: n__-___5;
+	--web-view-name: 출발지 설정 - 1-1 – 2;
+	--web-view-id: n__-_1-1__2;
 	--web-scale-to-fit: true;
 	--web-scale-to-fit-type: fit;
 	--web-scale-on-resize: true;
 	--web-enable-deep-linking: true;
 }
 :root {
-	--web-view-ids: n__-___5;
+	--web-view-ids: n__-_1-1__2;
 }
 * {
 	margin: 0;
@@ -44,20 +15,19 @@ body {min-height : 100vh;}
 	box-sizing: border-box;
 	border: none;
 }
-#n__-___5 {
+#n__-_1-1__2 {
 	position: absolute;
-	width: 100%;
-	height: 100%;
-	background-color: rgb(13, 13, 13, 1);
+	width: 360px;
+	height: 669px;
+	background-color: rgba(25,25,25,1);
 	overflow: hidden;
-	--web-view-name: 출발지 설정 - 끝 – 5;
-	--web-view-id: n__-___5;
+	--web-view-name: 출발지 설정 - 1-1 – 2;
+	--web-view-id: n__-_1-1__2;
 	--web-scale-to-fit: true;
 	--web-scale-to-fit-type: fit;
 	--web-scale-on-resize: true;
 	--web-enable-deep-linking: true;
 }
-
 @keyframes fadein {
 
 	0% {
@@ -68,6 +38,31 @@ body {min-height : 100vh;}
 	}
 
 }
+#n_29_dk {
+	fill: url(#n_29_dk);
+}
+.n_29_dk {
+	position: absolute;
+	overflow: visible;
+	width: 30px;
+	height: 30px;
+	left: 165px;
+	top: 440px;
+}
+#n__ {
+	left: 70px;
+	top: 126px;
+	position: absolute;
+	overflow: visible;
+	width: 194px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Noto Sans KR;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(166,175,175,1);
+}
 #Icon_ionic-ios-arrow-back {
 	position: absolute;
 	width: 13.503px;
@@ -75,15 +70,16 @@ body {min-height : 100vh;}
 	left: 10px;
 	top: 41px;
 	overflow: visible;
-	--web-animation: fadein undefineds undefined;
+	transition: all 0.4000000059604645s ease-in-out;
+	--web-animation: fadein 0.4000000059604645s ease-in-out;
 	--web-action-type: page;
-	--web-action-target: destination_text.html;
+	--web-action-target: ../start.html;
 	cursor: pointer;
 }
-#Icon_ionic-ios-arrow-back_ek {
-	fill: rgba(106,255,226,1);
+#Icon_ionic-ios-arrow-back_dn {
+	fill: rgba(166,175,175,1);
 }
-.Icon_ionic-ios-arrow-back_ek {
+.Icon_ionic-ios-arrow-back_dn {
 	overflow: visible;
 	position: absolute;
 	width: 13.503px;
@@ -92,7 +88,21 @@ body {min-height : 100vh;}
 	top: 0px;
 	transform: matrix(1,0,0,1,0,0);
 }
-#n__1__112 {
+#Text {
+	left: 132px;
+	top: 38px;
+	position: absolute;
+	overflow: visible;
+	width: 98px;
+	height: 29px;
+	text-align: center;
+	font-family: Noto Sans KR;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(243,243,252,1);
+}
+#n__1__84 {
 	position: absolute;
 	width: 79.271px;
 	height: 14.59px;
@@ -172,7 +182,7 @@ body {min-height : 100vh;}
 	position: absolute;
 	width: 7.731px;
 	height: 10.321px;
-	left: 3.583px;
+	left: 3.582px;
 	top: 0.794px;
 	transform: matrix(1,0,0,1,0,0);
 }
@@ -315,7 +325,7 @@ body {min-height : 100vh;}
 	width: 2px;
 	height: 5.433px;
 	left: 3px;
-	top: 5.54px;
+	top: 5.541px;
 	transform: matrix(1,0,0,1,0,0);
 }
 #n_11 {
@@ -333,115 +343,18 @@ body {min-height : 100vh;}
 	width: 2px;
 	height: 8.399px;
 	left: 6px;
-	top: 2.574px;
+	top: 2.575px;
 	transform: matrix(1,0,0,1,0,0);
 }
-#n_24 {
-	position: absolute;
-	/* width: 320px; */
-	width: calc(100% - 40px);
-	height: 75px;
-	left: 6%;
-	top: 85%;
-	/* left: 20px; */
-	/* top: 570px; */
-	overflow: visible;
-	transition: all 0.20000000298023224s ease-in;
-	--web-animation: fadein 0.20000000298023224s ease-in;
-	--web-action-type: page;
-	--web-action-target: route.html;
-	cursor: pointer;
+#Icon_awesome-microphone-alt {
+	fill: rgba(83,255,221,1);
 }
-#n_7_e {
-	fill: url(#n_7_e);
-}
-.n_7_e {
-	position: absolute;
+.Icon_awesome-microphone-alt {
 	overflow: visible;
-	/* width: 320px; */
-	width: 100%;
-	height: 75px;
-	left: 0px;
-	top: 0px;
-}
-#n_ {
-	left: 97px;
-	top: 22px;
 	position: absolute;
-	overflow: visible;
-	/* width: 127px; */
-	width: calc(100% - 194px);
-	white-space: nowrap;
-	/* text-align: left; */
-	text-align: center;
-	font-family: Noto Sans KR;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 22px;
-	color: rgba(25,25,25,1);
+	width: 77.736px;
+	height: 113.071px;
+	left: 141.13px;
+	top: 410px;
+	transform: matrix(1,0,0,1,0,0);
 }
-#n_2023-02-10__15940 {
-	filter: drop-shadow(2px 2px 10px rgba(147, 255, 234, 0.302));
-	position: absolute;
-	width: 260px;
-	height: 194px;
-	left: 50px;
-	top: 170px;
-	overflow: visible;
-}
-#n_10587 {
-	position: absolute;
-	/* width: 350px; */
-	width: calc(100% - 10px);
-	height: 100px;
-	left: 5px;
-	top: 59%;
-	/* top: 392px; */
-	overflow: visible;
-	opacity: 1;
-	text-align: center;
-}
-#result {
-	/* left: 10px; */
-	top: 0px;
-	position: absolute;
-	overflow: visible;
-	/* width: 350px; */
-	width: 100%;
-	white-space: nowrap;
-	text-align: center;
-	font-family: Noto Sans KR;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 13px;
-	color: rgba(243,243,252,1);
-}
-
-/* #Text {
-	left: 40px;
-	top: 0px;
-	position: absolute;
-	overflow: visible;
-	width: 162px;
-	white-space: nowrap;
-	text-align: center;
-	font-family: Noto Sans KR;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 25px;
-	color: rgba(243,243,252,1);
-}
-#n___144_33 {
-	left: 0px;
-	top: 43px;
-	position: absolute;
-	overflow: visible;
-	width: 242px;
-	white-space: nowrap;
-	text-align: left;
-	font-family: Noto Sans KR;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 20px;
-	color: rgba(243,243,252,1);
-} */

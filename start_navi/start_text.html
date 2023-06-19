@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>목적지 설정 – 3-1 – 5</title>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="start_text.css"/>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://apis.openapi.sk.com/tmap/jsv2?version=1&appKey=teLyJMrEuK74jFpneHDklwmLLRcKiU0aXgNbLx8j"></script>
+<script id="applicationScript" type="text/javascript" src="start_text.js"></script>
+
+
+<body>
+	
+<div id="n___3-1__5">
+<input type="text" style="font-size: 20px;" id="searchKeyword" name="searchKeyword" value="텍스트를 입력하세요" onclick="clearText()">
+<div>
+	<div style="width: 100%; float:center; color: white;
+	position: relative;
+	top: 200px;
+	left: 30px">
+		<div class="rst_wrap">
+			<div class="rst mCustomScrollbar">
+				<ul id="searchResult" name="searchResult">
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+	
+	<div onclick="application.goToTargetView(event)" id="Icon_ionic-ios-arrow-back">
+		<svg class="Icon_ionic-ios-arrow-back_el" viewBox="11.251 6.194 13.503 23.619">
+			<path id="Icon_ionic-ios-arrow-back_el" d="M 15.32109355926514 18 L 24.2578125 9.0703125 C 24.91875076293945 8.409375190734863 24.91875076293945 7.340624809265137 24.2578125 6.686718940734863 C 23.59687423706055 6.025781631469727 22.52812576293945 6.032812595367432 21.8671875 6.686718940734863 L 11.7421875 16.8046875 C 11.10234355926514 17.44453048706055 11.08828163146973 18.47109413146973 11.69296836853027 19.13203048706055 L 21.86015701293945 29.3203125 C 22.19062614440918 29.65078163146973 22.62656402587891 29.8125 23.05546951293945 29.8125 C 23.484375 29.8125 23.92031288146973 29.65078163146973 24.25078201293945 29.3203125 C 24.91172027587891 28.65937423706055 24.91172027587891 27.59062576293945 24.25078201293945 26.93671798706055 L 15.32109355926514 18 Z">
+			</path>
+		</svg>
+	</div>
+	<div id="Text">
+		<span>검색</span>
+	</div>
+	<div onclick="application.goToTargetView(event)" id = "new">
+		<span>뒤로
+			<br>가기
+		</span> 
+	</div>
+
+	</div>
+
+	
+	<div onclick="button()" id="n_24_fu">
+		<svg class="n_7_fw">
+			<linearGradient id="n_7_fw" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+				<stop offset="0" stop-color="#93eaff" stop-opacity="1"></stop>
+				<stop offset="1" stop-color="#74fbcf" stop-opacity="1"></stop>
+			</linearGradient>
+			<rect id="n_7_fw" rx="25" ry="25" x="0" y="0" width="100%" height="75">
+			</rect>
+		</svg>
+		<div id="n__fx">
+			<span>출발지   검색</span>
+		</div>
+	</div>
+	
+	
+
+</div>
+
+<script>
+	function button(){
+		var searchKeyword = document.getElementById("searchKeyword").value;
+		var headers = {}; 
+		headers["appKey"]="teLyJMrEuK74jFpneHDklwmLLRcKiU0aXgNbLx8j";
+
+		$.ajax({
+			method:"GET",
+			headers : headers,
+			url:"https://apis.openapi.sk.com/tmap/pois?version=1&format=json&callback=result",
+			async:false,
+			data:{
+				"searchKeyword" : searchKeyword,
+				"resCoordType" : "EPSG3857",
+				"reqCoordType" : "WGS84GEO",
+				"count" : 4
+			},
+			success:function(response){
+				var resultpoisData = response.searchPoiInfo.pois.poi;
+		
+				var innerHtml =""; 
+				
+					// Search Reulsts 결과값 노출 위한 변수
+
+				
+				for(var k in resultpoisData){
+					
+					var noorLat = Number(resultpoisData[k].noorLat);
+					var noorLon = Number(resultpoisData[k].noorLon);
+					var name = resultpoisData[k].name;
+					//console.log(name);
+
+					var id = resultpoisData[k].id;
+
+				// innerHtml += "<div class='result-item' style='border : 1px solid #ffffff; padding 100px; font-size : 20px;'> <style='vertical-align:middle;'/><span>"
+				// 							+name
+				// 							+"</span><button type = 'button' name='sendBtn' onClick='poiDetail("
+				// 							+ id
+				// 							+ ");'>.</button></div>";
+					
+				innerHtml += "<div onClick='poiDetail("
+								+id
+								+")'style='cursor: pointer;' ><div class='result-item' style='border : 1px solid #ffffff; padding 100px; font-size : 20px;'> <style='vertical-align:middle;'/><span>"
+								+name
+								+"</span></div></div>";
+
+					
+				}
+				
+				$("#searchResult").html(innerHtml);	//searchResult 결과값 노출
+				//map.panToBounds(positionBounds);	// 확장된 bounds의 중심으로 이동시키기
+				//map.zoomOut();
+				
+			},
+			error:function(request,status,error){
+				console.log("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+			}
+		});
+	
+	}
+
+	function poiDetail(poiId) {
+				console.log(poiId);
+				var headers = {}; 
+				headers["appKey"]="teLyJMrEuK74jFpneHDklwmLLRcKiU0aXgNbLx8j";
+
+				$.ajax({
+					method : "GET", // 요청 방식
+					headers : headers,
+					url : "https://apis.openapi.sk.com/tmap/pois/"
+							+ poiId // 상세보기를 누른 아이템의 POI ID
+							+ "?version=1&resCoordType=EPSG3857&format=json&callback=result",
+					async : false, // 동기 설정
+					success : function(response) {
+						console.log(response);
+			
+						// 응답받은 POI 정보
+						var detailInfo = response.poiDetailInfo;
+						var name = detailInfo.name;
+						var address = detailInfo.address;
+			
+						var noorLat = Number(detailInfo.frontLat);
+						var noorLon = Number(detailInfo.frontLon);
+			
+						var pointCng = new Tmapv2.Point(noorLon, noorLat);
+						var projectionCng = new Tmapv2.Projection.convertEPSG3857ToWGS84GEO(
+								pointCng);
+			
+						var lat = projectionCng._lat;
+						var lon = projectionCng._lng;
+
+						localStorage.setItem("start_place_lat", lat);
+						localStorage.setItem("start_place_lon", lon);
+
+						
+					},
+					error : function(request, status, error) {
+						console.log("code:" + request.status + "\n"
+								+ "message:" + request.responseText + "\n"
+								+ "error:" + error);
+					}
+				});
+				location.replace("start_text_map.html");
+			}
+</script>
+
+</body>
+</html>

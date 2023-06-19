@@ -5,8 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>출발지 설정 - 끝 – 5</title>
-<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="destination_text_map.css"/>
-<script id="applicationScript" type="text/javascript" src="destination_text_map.js"></script>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="start_text_map.css"/>
+<script id="applicationScript" type="text/javascript" src="start_text_map.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://apis.openapi.sk.com/tmap/jsv2?version=1&appKey=teLyJMrEuK74jFpneHDklwmLLRcKiU0aXgNbLx8j"></script>
 </head>
@@ -34,7 +34,7 @@
 			</rect>
 		</svg>
 		<div id="n_">
-			<span>목적지로 지정</span>
+			<span>출발지로 지정</span>
 		</div>
 	</div>
 	<div id="map_div" ></div>
@@ -52,8 +52,8 @@
 
 	<script>
 		var map, marker;
-		var load_destination_place_lat = localStorage.getItem("destination_place_lat");
-		var load_destination_place_lon = localStorage.getItem("destination_place_lon");
+		var load_place_lat = localStorage.getItem("start_place_lat");
+		var load_place_lon = localStorage.getItem("start_place_lon");
 		function initTmap() {
 			// 1. 지도 띄우기
 			map = new Tmapv2.Map("map_div", {
@@ -65,21 +65,21 @@
 				scrollwheel : true
 			});
 
-			if (load_destination_place_lat) {
-                reverseGeo(load_destination_place_lon, load_destination_place_lat)
+			if (load_place_lat) {
+                reverseGeo(load_place_lon, load_place_lat)
 
 				marker = new Tmapv2.Marker({
-					position : new Tmapv2.LatLng(load_destination_place_lat,load_destination_place_lon),
+					position : new Tmapv2.LatLng(load_place_lat,load_place_lon),
 					map : map
 				});
 
 				InfoWindow = new Tmapv2.InfoWindow({
-					position : new Tmapv2.LatLng(load_destination_place_lat,load_destination_place_lon),
+					position : new Tmapv2.LatLng(load_place_lat,load_place_lon),
 					// content : content,
 					type : 2,
 					map : map
 				});
-				map.setCenter(new Tmapv2.LatLng(load_destination_place_lat,load_destination_place_lon));
+				map.setCenter(new Tmapv2.LatLng(load_place_lat,load_place_lon));
 				map.setZoom(15);
 			}
 			function reverseGeo(lon, lat) {

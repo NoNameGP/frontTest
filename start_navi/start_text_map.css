@@ -14,7 +14,7 @@ body {min-height : 100vh;}
 	color: rgba(243, 243, 252, 0);
 	--web-animation: fadein undefineds undefined;
 	--web-action-type: page;
-	--web-action-target:  destination_text.html;
+	--web-action-target:  start_text.html;
 	cursor: pointer;
 }
 
@@ -77,7 +77,7 @@ body {min-height : 100vh;}
 	overflow: visible;
 	--web-animation: fadein undefineds undefined;
 	--web-action-type: page;
-	--web-action-target: destination_text.html;
+	--web-action-target: start_text.html;
 	cursor: pointer;
 }
 #Icon_ionic-ios-arrow-back_ek {
@@ -341,15 +341,15 @@ body {min-height : 100vh;}
 	/* width: 320px; */
 	width: calc(100% - 40px);
 	height: 75px;
+	/* left: 20px;
+	top: 570px; */
 	left: 6%;
 	top: 85%;
-	/* left: 20px; */
-	/* top: 570px; */
 	overflow: visible;
 	transition: all 0.20000000298023224s ease-in;
 	--web-animation: fadein 0.20000000298023224s ease-in;
 	--web-action-type: page;
-	--web-action-target: route.html;
+	--web-action-target: destination/destination.html;
 	cursor: pointer;
 }
 #n_7_e {
