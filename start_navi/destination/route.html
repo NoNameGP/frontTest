@@ -276,7 +276,7 @@
 										});
 
 										map.setCenter(new Tmapv2.LatLng(lat,lon));
-										map.setZoom(15);
+										map.setZoom(30); //15
 
 										console.log("현재 위치:"+lat, lon);
 										// document.getElementById('test').innerText = "현재 위치:"+lat, lon;
@@ -297,14 +297,14 @@
 											meter_distance = Math.round(distance*1000);
 
 											console.log("사이거리:"+meter_distance+"m");
-											document.getElementById('test').innerText = "현재 위치:"+lat+ lon +
-											 "\n 사이거리"+meter_distance+"m";
+											document.getElementById('test').innerText = "현재 위치:"+lat+ lon +"\n 사이거리:"+meter_distance+"m";
 
 											if(meter_distance <= 5){
 												console.log("회전:"+meter_distance+"m 후"+point_turnType_list[0]);
-											}
-											if(meter_distance <= 3){
-												console.log("회전:"+meter_distance+"m 후"+point_turnType_list[0]);
+												document.getElementById('test').innerText = "회전:"+meter_distance+"m 후 \n"+point_turnType_list[0];
+											// }
+											// if(meter_distance <= 3){
+											// 	console.log("회전:"+meter_distance+"m 후"+point_turnType_list[0]);
 												console.log("1포인트 제거!!!!");
 												point_lat_list.shift();
 												point_lon_list.shift();
@@ -335,7 +335,7 @@
 							//console.log("현재 위치2:"+lat, lon)
 							
 						}
-						setInterval(moving,2000);
+						setInterval(moving,1000);
 					});
 				}
 			}
