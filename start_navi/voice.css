@@ -1,3 +1,25 @@
+body {min-height : 100vh;}
+
+#new {
+	top: 5%;
+	left : 1%;
+	position: absolute;
+	overflow: visible;
+	width: 25px;
+	height: 10px;
+	text-align: center;
+	font-family: Noto Sans KR;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 5px;
+	color: rgba(243, 243, 252, 0);
+	--web-animation: fadein undefineds undefined;
+	--web-action-type: page;
+	--web-action-target: ../start.html;
+	cursor: pointer;
+}
+
+
 .mediaViewInfo {
 	--web-view-name: 출발지 설정 - 1-1 – 2;
 	--web-view-id: n__-_1-1__2;
@@ -17,8 +39,8 @@
 }
 #n__-_1-1__2 {
 	position: absolute;
-	width: 360px;
-	height: 669px;
+	width: 100%;
+	height: 100%;
 	background-color: rgba(25,25,25,1);
 	overflow: hidden;
 	--web-view-name: 출발지 설정 - 1-1 – 2;
@@ -50,11 +72,14 @@
 	top: 440px;
 }
 #n__ {
-	left: 70px;
-	top: 126px;
+	/* left: 70px;
+	top: 126px; */
+	left: 19%;
+	top: 19%;
 	position: absolute;
 	overflow: visible;
-	width: 194px;
+	/* width: 194px; */
+	width: calc(100% - 140px);
 	white-space: nowrap;
 	text-align: center;
 	font-family: Noto Sans KR;
@@ -67,8 +92,10 @@
 	position: absolute;
 	width: 13.503px;
 	height: 23.619px;
-	left: 10px;
-	top: 41px;
+	/* left: 10px;
+	top: 41px; */
+	left: 2%;
+	top: 5%;
 	overflow: visible;
 	transition: all 0.4000000059604645s ease-in-out;
 	--web-animation: fadein 0.4000000059604645s ease-in-out;
@@ -89,8 +116,10 @@
 	transform: matrix(1,0,0,1,0,0);
 }
 #Text {
-	left: 132px;
-	top: 38px;
+	/* left: 132px;
+	top: 38px; */
+	left: 37%;
+	top: 6%;
 	position: absolute;
 	overflow: visible;
 	width: 98px;
