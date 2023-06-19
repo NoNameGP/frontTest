@@ -15,20 +15,24 @@
 	
 <div id="n___3-1__5">
 <input type="text" style="font-size: 20px;" id="searchKeyword" name="searchKeyword" value="텍스트를 입력하세요" onclick="clearText()">
-<div>
-	<div style="width: 100%; float:center; color: white;
+
+	<!-- <div style="width: calc(100% - 60px); float:center; color: white;
 	position: relative;
 	top: 200px;
-	left: 30px">
-		<div class="rst_wrap">
-			<div class="rst mCustomScrollbar">
-				<ul id="searchResult" name="searchResult">
+	left: 30px"> -->
+	<div style="width: calc(100% - 60px); float:center; color: white;
+	position: relative;
+	top: 30%;
+	left: 8%">
+		<div class="rst_wrap" >
+			<div class="rst mCustomScrollbar" >
+				<ul id="searchResult" name="searchResult" >
 				</ul>
 			</div>
 		</div>
 	</div>
 	
-</div>
+
 
 	
 	<div onclick="application.goToTargetView(event)" id="Icon_ionic-ios-arrow-back">
@@ -109,7 +113,7 @@
 					
 				innerHtml += "<div onClick='poiDetail("
 								+id
-								+")'style='cursor: pointer;' ><div class='result-item' style='border : 1px solid #ffffff; padding 100px; font-size : 20px;'> <style='vertical-align:middle;'/><span>"
+								+")'style='cursor: pointer;' ><div class='result-item' style='border : 1px solid #ffffff; padding 100px; font-size : 20px; '> <style='vertical-align:middle;'/><span>"
 								+name
 								+"</span></div></div>";
 

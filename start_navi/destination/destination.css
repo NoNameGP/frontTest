@@ -123,7 +123,7 @@ body {min-height : 100vh;}
 	height: 72px;
 	left: 32px;
 	/* top: 206px; */
-	top : 30%;
+	top : 31%;
 	overflow: visible;
 	transition: all 0.20000000298023224s linear;
 	--web-animation: fadein 0.20000000298023224s linear;
@@ -167,7 +167,7 @@ body {min-height : 100vh;}
 	height: 72px;
 	left: 32px;
 	/* top: 298px; */
-	top : 41%;
+	top : 45%;
 	overflow: visible;
 	transition: all 0.20000000298023224s ease-in-out;
 	--web-animation: fadein 0.20000000298023224s ease-in-out;
@@ -207,8 +207,8 @@ body {min-height : 100vh;}
 #n__ea {
 	/* left: 131px;
 	top: 38px; */
-	left: 44%;
-	top: 5%;
+	left: 36%;
+	top: 6%;
 	position: absolute;
 	overflow: visible;
 	width: 99px;
