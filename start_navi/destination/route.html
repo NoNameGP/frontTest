@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<!-- <meta http-equiv="refresh" content="10"> 페이지 새로고침-->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://apis.openapi.sk.com/tmap/jsv2?version=1&appKey=teLyJMrEuK74jFpneHDklwmLLRcKiU0aXgNbLx8j"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>iPhone 13 mini – 12</title>
+	<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="route.css" />
+	<script id="applicationScript" type="text/javascript" src="route.js"></script>
+</head>
+
+<body onload="initTmap();">
+	<div id="iPhone_13_mini__12">
+		<script type="text/javascript">
+			// var map;
+			// var marker_s, marker_e, marker_p1, marker_p2;
+			// var totalMarkerArr = [];
+			// var drawInfoArr = [];
+			// var load_destination_place_lat = localStorage.getItem("destination_place_lat");
+			// var load_destination_place_lon = localStorage.getItem("destination_place_lon");
+			// var load_start_place_lat = localStorage.getItem("start_place_lat");
+			// var load_start_place_lon = localStorage.getItem("start_place_lon");
+			// var resultdrawArr = [];
+			// var turnType_dict={1:"안내 없음", 2:"안내 없음", 3:"안내 없음", 4:"안내 없음", 5:"안내 없음", 6:"안내 없음", 7:"안내 없음", 11:"직진", 12:"좌회전", 13:"우회전", 14:"유턴", 16:"8시 방향 좌회전", 17:"10시 방향 좌회전", 18:"2시 방향 우회전", 19:"4시 방향 우회전", 184:"경유지", 185:"첫번째 경유지", 186:"두번째 경유지", 187:"세번째 경유지", 188:"네번째 경유지", 189:"다섯번째 경유지", 125:"육교", 126:"지하보도", 127:"계단 진입", 128:"경사로 진입", 129:"계단과 경사로 진입", 200:"출발지", 201:"목적지", 211:"횡단보도", 212:"죄측 횡단보도", 213:"우측 횡단보도", 214:"8시 방향 횡단보도", 215:"10시 방향 횡단보도", 216:"2시 방향 횡단보도", 217:"4시 방향 횡단보도", 218:"엘리베이터", 233:"직진 임시"}
+			// var point_turnType_list=[];
+			// let point_lat_list=[];
+			// let point_lon_list=[];
+			// let timer;
+
+			function initTmap() {
+				var map;
+				var marker_s, marker_e, marker_p1, marker_p2;
+				var totalMarkerArr = [];
+				var drawInfoArr = [];
+				var load_destination_place_lat = localStorage.getItem("destination_place_lat");
+				var load_destination_place_lon = localStorage.getItem("destination_place_lon");
+				var load_start_place_lat = localStorage.getItem("start_place_lat");
+				var load_start_place_lon = localStorage.getItem("start_place_lon");
+				var resultdrawArr = [];
+				var turnType_dict={1:"안내 없음", 2:"안내 없음", 3:"안내 없음", 4:"안내 없음", 5:"안내 없음", 6:"안내 없음", 7:"안내 없음", 11:"직진", 12:"좌회전", 13:"우회전", 14:"유턴", 16:"8시 방향 좌회전", 17:"10시 방향 좌회전", 18:"2시 방향 우회전", 19:"4시 방향 우회전", 184:"경유지", 185:"첫번째 경유지", 186:"두번째 경유지", 187:"세번째 경유지", 188:"네번째 경유지", 189:"다섯번째 경유지", 125:"육교", 126:"지하보도", 127:"계단 진입", 128:"경사로 진입", 129:"계단과 경사로 진입", 200:"출발지", 201:"목적지", 211:"횡단보도", 212:"죄측 횡단보도", 213:"우측 횡단보도", 214:"8시 방향 횡단보도", 215:"10시 방향 횡단보도", 216:"2시 방향 횡단보도", 217:"4시 방향 횡단보도", 218:"엘리베이터", 233:"직진 임시"}
+				var point_turnType_list=[];
+				let point_lat_list=[];
+				let point_lon_list=[];
+				let timer;
+				// 1. 지도 띄우기
+				map = new Tmapv2.Map("map_div", {
+					center: new Tmapv2.LatLng(load_start_place_lat, load_start_place_lon),
+					width: "100%",
+					height: "100%",
+					zoom: 17,
+					zoomControl: true,
+					scrollwheel: true
+				});
+
+				// 도착지 마커
+				if (load_destination_place_lat) {
+					reverseGeo(load_destination_place_lon, load_destination_place_lat)
+
+					// marker_e = new Tmapv2.Marker({
+					// 	position: new Tmapv2.LatLng(load_destination_place_lat, load_destination_place_lon),
+					// 	icon: "http://tmapapi.sktelecom.com/upload/tmap/marker/pin_r_m_e.png",
+					// 	iconSize: new Tmapv2.Size(24, 38),
+					// 	map: map
+					// });
+
+					// InfoWindow = new Tmapv2.InfoWindow({
+					// 	position : new Tmapv2.LatLng(load_place_lat,load_place_lon),
+					// 	// content : content,
+					// 	type : 2,
+					// 	map : map
+					// });
+					//map.setCenter(new Tmapv2.LatLng(load_destination_place_lat, load_destination_place_lon));
+					map.setZoom(15);
+
+					function reverseGeo(lon, lat) {
+						var headers = {};
+						headers["appKey"] = "teLyJMrEuK74jFpneHDklwmLLRcKiU0aXgNbLx8j";
+
+						$.ajax({
+							method: "GET",
+							headers: headers,
+							url: "https://apis.openapi.sk.com/tmap/geo/reversegeocoding?version=1&format=json&callback=result",
+							async: false,
+							data: {
+								"coordType": "WGS84GEO",
+								"addressType": "A10",
+								"lon": lon,
+								"lat": lat
+							}
+						});
+					}
+				}
+
+				// 2. 시작, 도착 심볼찍기
+				// 시작. 현재 위치로
+				if (navigator.geolocation) {
+					navigator.geolocation.getCurrentPosition(function (position) {
+						var lat = position.coords.latitude;
+						var lon = position.coords.longitude;
+
+						console.log(lat, lon)
+
+
+
+						var headers = {};
+						headers["appKey"] = "teLyJMrEuK74jFpneHDklwmLLRcKiU0aXgNbLx8j";
+
+						$.ajax({
+							method: "POST",
+							headers: headers,
+							url: "https://apis.openapi.sk.com/tmap/routes/pedestrian?version=1&format=json&callback=result",
+							async: false,
+							data: {
+								"startX": parseFloat(load_start_place_lon),
+								"startY": parseFloat(load_start_place_lat),
+								// "startY" : "37.564991",
+
+								//근처 값
+								// "startY" : "37.394438",
+								// "startX" : "126.651060",
+								"endX": parseFloat(load_destination_place_lon),
+								"endY": parseFloat(load_destination_place_lat),
+								"reqCoordType": "WGS84GEO",
+								"resCoordType": "EPSG3857",
+								"startName": "출발지",
+								"endName": "도착지"
+							},
+							success: function (response) {
+								var resultData = response.features;
+
+								//결과 출력
+								var tDistance = "총 거리 : "
+									+ ((resultData[0].properties.totalDistance) / 1000)
+										.toFixed(1) + "km,";
+								var tTime = " 총 시간 : "
+									+ ((resultData[0].properties.totalTime) / 60)
+										.toFixed(0) + "분";
+
+								$("#result").text(tDistance + tTime);
+
+								console.log(tDistance + tTime);
+
+								//기존 그려진 라인 & 마커가 있다면 초기화
+								if (resultdrawArr.length > 0) {
+									for (var i in resultdrawArr) {
+										resultdrawArr[i]
+											.setMap(null);
+									}
+									resultdrawArr = [];
+								}
+
+								drawInfoArr = [];
+
+								for (var i in resultData) { //for문 [S]
+									var geometry = resultData[i].geometry;
+									var properties = resultData[i].properties;
+									var polyline_;
+
+									if(geometry.type == "Point"){
+										var latlng = new Tmapv2.Point(geometry.coordinates[0],geometry.coordinates[1]);
+										var convertPoint = new Tmapv2.Projection.convertEPSG3857ToWGS84GEO(latlng);
+										var convertChange = new Tmapv2.LatLng(convertPoint._lat,convertPoint._lng);
+										//console.log("점: "+properties.description+"/ 좌표: "+convertChange);
+										//console.log("타입: "+properties.turnType+ " // "+turnType_dict[properties.turnType]);
+										point_turnType_list.push(properties.turnType);
+										point_lat_list.push(convertChange._lat);
+										point_lon_list.push(convertChange._lng);
+									}
+
+									if (geometry.type == "LineString") {
+										for (var j in geometry.coordinates) {
+											// 경로들의 결과값(구간)들을 포인트 객체로 변환 
+											var latlng = new Tmapv2.Point(geometry.coordinates[j][0],geometry.coordinates[j][1]);
+											// 포인트 객체를 받아 좌표값으로 변환
+											var convertPoint = new Tmapv2.Projection.convertEPSG3857ToWGS84GEO(latlng);
+											// 포인트객체의 정보로 좌표값 변환 객체로 저장
+											var convertChange = new Tmapv2.LatLng(convertPoint._lat,convertPoint._lng);
+											// 배열에 담기
+											drawInfoArr.push(convertChange);
+
+											//console.log("선: "+properties.description);
+										}
+									} else {
+										var markerImg = "";
+										var pType = "";
+										var size;
+
+										if (properties.pointType == "S") { //출발지 마커
+											markerImg = "http://tmapapi.sktelecom.com/upload/tmap/marker/pin_r_m_s.png";
+											pType = "S";
+											size = new Tmapv2.Size(24, 38);
+										} else if (properties.pointType == "E") { //도착지 마커
+											markerImg = "http://tmapapi.sktelecom.com/upload/tmap/marker/pin_r_m_e.png";
+											pType = "E";
+											size = new Tmapv2.Size(24, 38);
+										} else { //각 포인트 마커
+											markerImg = "http://topopen.tmap.co.kr/imgs/point.png";
+											pType = "P";
+											size = new Tmapv2.Size(8, 8);
+										}
+
+										// 경로들의 결과값들을 포인트 객체로 변환 
+										var latlon = new Tmapv2.Point(
+											geometry.coordinates[0],
+											geometry.coordinates[1]);
+
+										// 포인트 객체를 받아 좌표값으로 다시 변환
+										var convertPoint = new Tmapv2.Projection.convertEPSG3857ToWGS84GEO(
+											latlon);
+
+										var routeInfoObj = {
+											markerImage: markerImg,
+											lng: convertPoint._lng,
+											lat: convertPoint._lat,
+											pointType: pType
+										};
+
+										// Marker 추가
+										marker_p = new Tmapv2.Marker(
+											{
+												position: new Tmapv2.LatLng(
+													routeInfoObj.lat,
+													routeInfoObj.lng),
+												icon: routeInfoObj.markerImage,
+												iconSize: size,
+												map: map
+											});
+									}
+								}//for문 [E]
+								drawLine(drawInfoArr);
+							},
+							error: function (request, status, error) {
+								console.log("code:" + request.status + "\n"
+									+ "message:" + request.responseText + "\n"
+									+ "error:" + error);
+							}
+						});
+
+
+						function addComma(num) {
+							var regexp = /\B(?=(\d{3})+(?!\d))/g;
+							return num.toString().replace(regexp, ',');
+						}
+
+						function drawLine(arrPoint) {
+							var polyline_;
+							
+							polyline_ = new Tmapv2.Polyline({
+								path: arrPoint,
+								strokeColor: "#DD0000",
+								strokeWeight: 6,
+								map: map
+							});
+							resultdrawArr.push(polyline_);
+						}
+
+
+						function moving(){
+							if (navigator.geolocation) {
+								navigator.geolocation.getCurrentPosition(
+									function(position) {
+										var lat = position.coords.latitude;
+										var lon = position.coords.longitude;
+
+										//console.log("현재 위치:"+lat, lon);
+
+										marker_s = new Tmapv2.Marker({
+											position : new Tmapv2.LatLng(lat,lon),
+											map : map,
+											icon: "http://tmapapi.sktelecom.com/upload/tmap/marker/pin_r_m_s.png",
+											iconSize: new Tmapv2.Size(24, 38),
+										});
+
+										map.setCenter(new Tmapv2.LatLng(lat,lon));
+										map.setZoom(15);
+
+										console.log("현재 위치:"+lat, lon);
+										// document.getElementById('test').innerText = "현재 위치:"+lat, lon;
+										distanceInKilometerByHaversine(lat, lon, point_lat_list[0], point_lon_list[0]);
+										function distanceInKilometerByHaversine(x1, y1, x2, y2) {
+											var distance; //키로미터
+											var radius = 6371; // 지구 반지름(km)
+											var toRadian = Math.PI / 180;
+
+											var deltaLatitude = Math.abs(x1 - x2) * toRadian;
+											var deltaLongitude = Math.abs(y1 - y2) * toRadian;
+
+											var sinDeltaLat = Math.sin(deltaLatitude / 2);
+											var sinDeltaLng = Math.sin(deltaLongitude / 2);
+											var squareRoot = Math.sqrt(sinDeltaLat * sinDeltaLat + Math.cos(x1*toRadian) * Math.cos(x2*toRadian) * sinDeltaLng * sinDeltaLng);
+
+											distance = 2 * radius * Math.asin(squareRoot);
+											meter_distance = Math.round(distance*1000);
+
+											console.log("사이거리:"+meter_distance+"m");
+											document.getElementById('test').innerText = "현재 위치:"+lat+ lon +
+											 "\n 사이거리"+meter_distance+"m";
+
+											if(meter_distance <= 5){
+												console.log("회전:"+meter_distance+"m 후"+point_turnType_list[0]);
+											}
+											if(meter_distance <= 0.5){
+												console.log("회전:"+meter_distance+"m 후"+point_turnType_list[0]);
+												console.log("1포인트 제거!!!!");
+												point_lat_list.shift();
+												point_lon_list.shift();
+												point_turnType_list.shift();
+											}
+
+											return distance;
+										}
+									});
+
+								
+							}
+
+							//시작지 마커. 현재 위치로
+							// marker_s = new Tmapv2.Marker({
+							// 	position: new Tmapv2.LatLng(lat, lon),
+							// 	map: map,
+							// 	icon: "http://tmapapi.sktelecom.com/upload/tmap/marker/pin_r_m_s.png",
+							// 	iconSize: new Tmapv2.Size(24, 38),
+							// });
+
+							// map.setCenter(new Tmapv2.LatLng(lat, lon));
+							// map.setZoom(15);
+
+							//console.log(point_lat_list);
+							//console.log(point_turnType_list);
+
+							//console.log("현재 위치2:"+lat, lon)
+							
+						}
+						setInterval(moving,2000);
+					});
+				}
+			}
+
+		// marker_e = new Tmapv2.Marker(
+		// 		{
+		// 			position : new Tmapv2.LatLng(37.366439,126.637649),
+		// 			icon : "http://tmapapi.sktelecom.com/upload/tmap/marker/pin_r_m_e.png",
+		// 			iconSize : new Tmapv2.Size(24, 38),
+		// 			map : map
+		// 		});
+
+			//timer = setInterval(initTmap, 10000); 1. 깜빡이지는 않지만 선이 사라짐
+			// function ddd(){						2. 페이지를 새로 고침하는 거라 지도가 깜빡임
+			// 	location.reload();
+			// }
+			//setInterval(initTmap,1000);
+
+			// console.log(point_turnType_list);
+			// console.log(point_lat_list);
+			// console.log(point_lon_list);
+			// var b = [];
+			// b.push(5);
+			// var b = [1,2,3,6,5,7];
+			// b.shift();
+			// console.log(b[0]);
+			// console.log(b);
+			// console.log(b[0]);
+			// console.log(point_lat_list.length);
+			// console.log(point_lat_list.at(0)); //point_latlng_list[0]._lat, point_latlng_list[0]._lon, point_latlng_list[1]._lat, point_latlng_list[1]._lon);
+			
+			//distanceInKilometerByHaversine(37.637104976090065, 127.02307474850947, 37.64278861132286, 127.022535759339);
+
+			// function distanceInKilometerByHaversine(x1, y1, x2, y2) {
+			// 	var distance; //키로미터
+			// 	var radius = 6371; // 지구 반지름(km)
+			// 	var toRadian = Math.PI / 180;
+
+			// 	var deltaLatitude = Math.abs(x1 - x2) * toRadian;
+			// 	var deltaLongitude = Math.abs(y1 - y2) * toRadian;
+
+			// 	var sinDeltaLat = Math.sin(deltaLatitude / 2);
+			// 	var sinDeltaLng = Math.sin(deltaLongitude / 2);
+			// 	var squareRoot = Math.sqrt(sinDeltaLat * sinDeltaLat + Math.cos(x1*toRadian) * Math.cos(x2*toRadian) * sinDeltaLng * sinDeltaLng);
+
+			// 	distance = 2 * radius * Math.asin(squareRoot);
+			// 	meter_distance = Math.round(distance*1000);
+
+			// 	console.log("사이거리:"+meter_distance+"m");
+
+			// 	if(meter_distance <= 5){
+			// 		console.log(meter_distance+"m 후"+"turnType(좌회전)");
+			// 	}
+
+			// 	return distance;
+			// }
+
+		</script>
+		<div id="map_wrap" class="map_wrap3">
+			<div id="map_div"></div>
+		</div>
+		<div class="map_act_btn_wrap clear_box"></div>
+		<p id="result"></p>
+		
+
+
+
+
+
+
+		<svg class="n_163">
+			<rect id="n_163" rx="0" ry="0" x="0" y="0" width="360" height="126">
+			</rect>
+		</svg>
+		<div id="n_">
+			<span>경로 안내</span>
+		</div>
+		<div onclick="application.goToTargetView(event)" id="Icon_ionic-ios-arrow-back">
+			<svg class="Icon_ionic-ios-arrow-back_e" viewBox="11.251 6.194 13.503 23.619">
+				<path id="Icon_ionic-ios-arrow-back_e"
+					d="M 15.32109355926514 18 L 24.2578125 9.0703125 C 24.91875076293945 8.409375190734863 24.91875076293945 7.340624809265137 24.2578125 6.686718940734863 C 23.59687423706055 6.025781631469727 22.52812576293945 6.032812595367432 21.8671875 6.686718940734863 L 11.7421875 16.8046875 C 11.10234355926514 17.44453048706055 11.08828163146973 18.47109413146973 11.69296836853027 19.13203048706055 L 21.86015701293945 29.3203125 C 22.19062614440918 29.65078163146973 22.62656402587891 29.8125 23.05546951293945 29.8125 C 23.484375 29.8125 23.92031288146973 29.65078163146973 24.25078201293945 29.3203125 C 24.91172027587891 28.65937423706055 24.91172027587891 27.59062576293945 24.25078201293945 26.93671798706055 L 15.32109355926514 18 Z">
+				</path>
+			</svg>
+		</div>
+		<div id="n__1__54" class="______1___54">
+			<div id="n_603">
+				<div id="n_284">
+					<svg class="n_156">
+						<rect id="n_156" rx="0" ry="0" x="0" y="0" width="34.362" height="11.796">
+						</rect>
+					</svg>
+					<div id="n_230">
+						<span>12:30</span>
+					</div>
+				</div>
+				<div id="sysbar_battery">
+					<svg class="n_159">
+						<rect id="n_159" rx="0" ry="0" x="0" y="0" width="14" height="12">
+						</rect>
+					</svg>
+					<svg class="n_80" viewBox="42.8 1 7.731 10.321">
+						<path id="n_80"
+							d="M 47.95423126220703 1.737242221832275 L 47.95423126220703 1 L 45.37711715698242 1 L 45.37711715698242 1.737242221832275 L 42.80000305175781 1.737242221832275 L 42.80000305175781 11.32139110565186 L 50.53134536743164 11.32139110565186 L 50.53134536743164 1.737242221832275 L 47.95423126220703 1.737242221832275 Z">
+						</path>
+					</svg>
+				</div>
+			</div>
+			<div id="Icon_feather-wifi">
+				<svg class="n_2148" viewBox="7.5 15.003 8.186 1.617">
+					<path id="n_2148"
+						d="M 7.5 16.61988639831543 C 9.871232032775879 14.46428489685059 13.31466579437256 14.46428680419922 15.6858959197998 16.61988830566406">
+					</path>
+				</svg>
+				<svg class="n_2149" viewBox="2.13 7.504 13.421 2.536">
+					<path id="n_2149"
+						d="M 2.130000114440918 10.04040813446045 C 5.964924335479736 6.658497333526611 11.71561336517334 6.658499240875244 15.55053234100342 10.04041004180908">
+					</path>
+				</svg>
+				<svg class="n_2150" viewBox="12.795 22.502 5.139 0.704">
+					<path id="n_2150"
+						d="M 12.79500007629395 23.20541381835938 C 14.33347225189209 22.26737403869629 16.39505386352539 22.26737594604492 17.93352508544922 23.20541572570801">
+					</path>
+				</svg>
+				<svg class="n_2151" viewBox="18 30 2 2">
+					<path id="n_2151" d="M 18 30 L 18 30">
+					</path>
+				</svg>
+			</div>
+			<div id="n_615">
+				<svg class="n_8" viewBox="0 0 2 0.858">
+					<path id="n_8" d="M 0 0.8582178950309753 L 0 0">
+					</path>
+				</svg>
+				<svg class="n_9" viewBox="0 0 2 8.973">
+					<path id="n_9" d="M 0 8.973363876342773 L 0 0">
+					</path>
+				</svg>
+				<svg class="n_10" viewBox="0 0 2 3.433">
+					<path id="n_10" d="M 0 3.432871580123901 L 0 0">
+					</path>
+				</svg>
+				<svg class="n_11" viewBox="0 0 2 6.399">
+					<path id="n_11" d="M 0 6.398709774017334 L 0 0">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div id="n_10469">
+			<svg class="n_161">
+				<rect id="n_161" rx="5" ry="5" x="0" y="0" width="300" height="32">
+				</rect>
+			</svg>
+			<div id="Text">
+				<span>집</span>
+			</div>
+			<div id="Text_fq">
+				<span>덕성여자대학교</span>
+			</div>
+			<div id="n_628">
+				<svg class="n_13" viewBox="0 0 12 2">
+					<path id="n_13" d="M 0 0 L 12 0">
+					</path>
+				</svg>
+				<svg class="n_14" viewBox="0 0 4 4">
+					<path id="n_14" d="M 0 0 L 4 4">
+					</path>
+				</svg>
+				<svg class="n_15" viewBox="0 0 4 4">
+					<path id="n_15" d="M 0 4 L 4 0">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div id = "test">
+			<span></span>
+			</div>
+		<div onclick="window.location.href ='http://127.0.0.1:5000/webcam';" id="n_10595">
+		<!-- <div onclick="application.goToTargetView(event)" id="n_10595"> -->
+			<div id="n_10555">
+				<svg class="n_7">
+					<rect id="n_7" rx="20" ry="20" x="0" y="0" width="70" height="70">
+					</rect>
+				</svg>
+			</div>
+			<div id="n_10594">
+				<svg class="n_28" viewBox="0 0 30 5">
+					<path id="n_28" d="M 0 0 L 30 0">
+					</path>
+				</svg>
+				<svg class="n_31" viewBox="0 0 30 5">
+					<path id="n_31" d="M 0 0 L 30 0">
+					</path>
+				</svg>
+				<svg class="n_29" viewBox="0 0 30 5">
+					<path id="n_29" d="M 0 0 L 30 0">
+					</path>
+				</svg>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
