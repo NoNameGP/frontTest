@@ -78,7 +78,7 @@ body {min-height : 100vh;}
 #n_258 {
 	/* left: 140px;
 	top: 38px; */
-	left: 44%;
+	left: 39%;
 	top: 5%;
 	position: absolute;
 	overflow: visible;
@@ -381,7 +381,8 @@ body {min-height : 100vh;}
 	position: absolute;
 	overflow: visible;
 	/* width: 288px; */
-	height: 181px;
+	/* height: 181px; */
+	height: 27%;
 	left: 36px;
 	top: 16%;
 	/* top: 106px; */
