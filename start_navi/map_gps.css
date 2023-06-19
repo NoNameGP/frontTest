@@ -9,11 +9,17 @@ body {min-height : 100vh;}
 }
 
 #n__ {
-	left: 80px;
-	top: 100px;
+	/* left: 80px;
+	top: 100px; */
+	/* left: 22%;
+	top : 15%; */
+
+	left: 37%;
+	top: 5%;
 	position: absolute;
 	overflow: visible;
-	width: 194px;
+	/* width: 194px; */
+	width: 113.69px;
 	white-space: nowrap;
 	text-align: center;
 	font-family: Noto Sans KR;
@@ -405,10 +411,12 @@ circle:nth-of-type(4){
 	position: absolute;
 	width: 156px;
 	height: 75px;
-	/* width: calc(100% - 376px); */
-	left: 188px;
-	top: 570px;
-	/* top: 86%; */
+	/* width: calc((100% - 376px)); */
+	/* left: 188px;
+	top: 570px; */
+	width: calc((100% - 32px)/2);
+	left: 52%;
+	top: 85%;
 	overflow: visible;
 	opacity: 0;
 	transition: all 0.20000000298023224s linear;
@@ -423,11 +431,11 @@ circle:nth-of-type(4){
 .n_7_ee {
 	position: absolute;
 	overflow: visible;
-	width: 156px;
-	/* width: 100%; */
+	/* /* width: 156px; */
 	height: 75px;
 	left: 0px;
-	top: 0px;
+	top: 0px; 
+	width: 50%;
 }
 #n_ {
 	left: 17px;
@@ -498,12 +506,13 @@ circle:nth-of-type(4){
 
 #n_17 {
 	position: absolute;
-	width: 156px;
-	/* width: calc(100% - 32px); */
+	/* width: 156px; */
+	width: calc((100% - 32px)/2);
 	height: 75px;
-	left: 16px;
-	top: 569px;
-	/* top : 86%;  */
+	/* left: 16px; */
+	left: 4%;
+	/* top: 569px; */
+	top : 85%; 
 	opacity: 0;
 	overflow: visible;
 	--web-animation: fadein undefineds undefined;
@@ -523,23 +532,23 @@ circle:nth-of-type(4){
 .n_7_el {
 	position: absolute;
 	overflow: visible;
-	width: 156px;
-	/* width: 70%; */
+	/* width: 156px; */
+	width: 50%;
 	height: 75px;
 	left: 0px;
 	top: 0px;
 }
 #Text_em {
-	left: 47.98px;
-	top: 22px;
-	/* top: 30%; */
+	/* left: 47.98px; */
+	/* top: 22px; */
+	left: 14%;
 	position: absolute;
 	overflow: visible;
-	width: 62px;
+	width: 66px;
 	/* width: calc(100% - 95.96px); */
 	white-space: nowrap;
-	text-align: left;
-	/* text-align: center; */
+	/* text-align: left; */
+	text-align: center;
 	font-family: Noto Sans KR;
 	font-style: normal;
 	font-weight: bold;

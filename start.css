@@ -136,7 +136,7 @@ body {min-height : 100vh;}
 	height: 72px;
 	left: 32px;
 	/* top: 206px; */
-	top : 30%;
+	top : 31%;
 	overflow: visible;
 	--web-animation: fadein undefineds undefined;
 	--web-action-type: page;
@@ -246,13 +246,13 @@ body {min-height : 100vh;}
 #n__d {
 	/* left: 132px;
 	top: 38px; */
-	left: 44%;
+	left: 37%;
 	top: 5%;
 	position: absolute;
 	overflow: visible;
-	width: 98px;
+	width: 107.03px;
 	height: 29px;
-	text-align: center;
+	text-align: left;
 	font-family: Noto Sans KR;
 	font-style: normal;
 	font-weight: bold;
