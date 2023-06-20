@@ -606,8 +606,10 @@ body {min-height : 100vh;}
 	position: absolute;
 	width: 70px;
 	height: 70px;
-	left: 274px;
-	top: 580px;
+	/* left: 274px;
+	top: 580px; */
+	left: 76%;
+	top: 87%;
 	overflow: visible;
 	transition: all 0.20000000298023224s ease-out;
 	--web-animation: fadein 0.20000000298023224s ease-out;

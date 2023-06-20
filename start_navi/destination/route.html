@@ -339,8 +339,9 @@
 
 										console.log("현재 위치:"+lat, lon);
 										// document.getElementById('test').innerText = "현재 위치:"+lat, lon;
-										distanceInKilometerByHaversine(lat, lon, point_lat_list[0], point_lon_list[0]);
-										function distanceInKilometerByHaversine(x1, y1, x2, y2) {
+										distanceInKilometerByHaversine(0, lat, lon, point_lat_list[0], point_lon_list[0]); //사이거리
+										distanceInKilometerByHaversine(1, lat, lon, point_lat_list[0], point_lon_list[0]); //최종목적지 거리
+										function distanceInKilometerByHaversine(a, x1, y1, x2, y2) {
 											var distance; //키로미터
 											var radius = 6371; // 지구 반지름(km)
 											var toRadian = Math.PI / 180;
@@ -358,7 +359,7 @@
 											console.log("사이거리:"+meter_distance+"m");
 											document.getElementById('test').innerText = "현재 위치:"+lat+ lon +"\n 사이거리:"+meter_distance+"m";
 
-											if(meter_distance <= 5){
+											if(a==0 && meter_distance <= 8){
 												console.log("회전:"+meter_distance+"m 후"+point_turnType_list[0]);
 												document.getElementById('test').innerText = "회전:"+meter_distance+"m 후 \n"+point_turnType_list[0];
 
@@ -378,6 +379,25 @@
 												point_lat_list.shift();
 												point_lon_list.shift();
 												point_turnType_list.shift();
+											}
+
+											if(a==1 && meter_distance <= 8){
+												console.log("회전:"+meter_distance+"m 후"+point_turnType_list[0]);
+												document.getElementById('test').innerText = meter_distance+"m 후 도착";
+
+												var t = meter_distance+"m 후 도착";
+
+												if(load_switch_status=="on"){
+													speech(t.value);
+													console.log("on");
+												}else{
+													console.log("off");
+												}
+													
+											// }
+											// if(meter_distance <= 3){
+											// 	console.log("회전:"+meter_distance+"m 후"+point_turnType_list[0]);
+											location.replace("routeFinish.html");
 											}
 
 											return distance;
@@ -462,6 +482,8 @@
 			// 	return distance;
 			// }
 
+
+
 		</script>
 		<div id="map_wrap" class="map_wrap3">
 			<div id="map_div"></div>
@@ -496,37 +518,12 @@
 		</div>
 	
 		</div>
-		<div id="n_10469">
-			<svg class="n_161">
-				<rect id="n_161" rx="5" ry="5" x="0" y="0" width="300" height="32">
-				</rect>
-			</svg>
-			<div id="Text">
-				<span>집</span>
-			</div>
-			<div id="Text_fq">
-				<span>덕성여자대학교</span>
-			</div>
-			<div id="n_628">
-				<svg class="n_13" viewBox="0 0 12 2">
-					<path id="n_13" d="M 0 0 L 12 0">
-					</path>
-				</svg>
-				<svg class="n_14" viewBox="0 0 4 4">
-					<path id="n_14" d="M 0 0 L 4 4">
-					</path>
-				</svg>
-				<svg class="n_15" viewBox="0 0 4 4">
-					<path id="n_15" d="M 0 4 L 4 0">
-					</path>
-				</svg>
-			</div>
-		</div>
+	
 		<div id = "test">
 			<span></span>
 			</div>
-		<div onclick="window.location.href ='http://127.0.0.1:5000/webcam';" id="n_10595">
-		<!-- <div onclick="application.goToTargetView(event)" id="n_10595"> -->
+		<!-- <div onclick="window.location.href ='http://127.0.0.1:5000/webcam';" id="n_10595"> -->
+		<div onclick="application.goToTargetView(event)" id="n_10595">
 			<div id="n_10555">
 				<svg class="n_7">
 					<rect id="n_7" rx="20" ry="20" x="0" y="0" width="70" height="70">
