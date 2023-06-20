@@ -1,0 +1,612 @@
+.parent {
+	position: relative;
+	accent-color: #74FBCF;
+	/* height: 400px; */
+}
+
+#range-slider {
+	position: absolute;
+	top: 160px;
+	left: 50px;
+	z-index: 1;
+}
+#range-slider {
+	margin-top: 20px;
+}
+.parent input[type="range"] {
+  width: 250px;
+  height: 10px;
+}
+
+
+
+
+
+
+
+
+.mediaViewInfo {
+	--web-view-name: 환경설정 – 1;
+	--web-view-id: n__1;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: fit;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: n__1;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#n__1 {
+	position: absolute;
+	width: 360px;
+	height: 669px;
+	background-color: rgba(13,13,13,1);
+	overflow: hidden;
+	--web-view-name: 환경설정 – 1;
+	--web-view-id: n__1;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: fit;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+@keyframes fadein {
+
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+
+}
+#n_179 {
+	fill: rgba(54,54,54,1);
+}
+.n_179 {
+	position: absolute;
+	overflow: visible;
+	width: 316px;
+	height: 118px;
+	left: 22px;
+	top: 114px;
+}
+#n_189 {
+	fill: rgba(54,54,54,1);
+}
+.n_189 {
+	position: absolute;
+	overflow: visible;
+	width: 316px;
+	height: 72px;
+	left: 22px;
+	top: 252px;
+}
+#n_176 {
+	fill: rgba(25,25,25,1);
+}
+.n_176 {
+	position: absolute;
+	overflow: visible;
+	width: 360px;
+	height: 94px;
+	left: 0px;
+	top: 0px;
+}
+#Text {
+	left: 125px;
+	top: 38px;
+	position: absolute;
+	overflow: visible;
+	width: 112px;
+	height: 29px;
+	text-align: center;
+	font-family: Noto Sans KR;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(243,243,252,1);
+}
+#n_71 {
+	position: absolute;
+	width: 116px;
+	height: 29px;
+	left: 42px;
+	top: 135px;
+	overflow: visible;
+}
+#n_ {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 117px;
+	height: 29px;
+	text-align: left;
+	font-family: Noto Sans KR;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(243,243,252,1);
+}
+#n_74 {
+	position: absolute;
+	width: 115px;
+	height: 29px;
+	left: 42px;
+	top: 274px;
+	overflow: visible;
+}
+#n__dx {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 116px;
+	height: 29px;
+	text-align: left;
+	font-family: Noto Sans KR;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(243,243,252,1);
+}
+#Icon_ionic-ios-arrow-back {
+	position: absolute;
+	width: 13.503px;
+	height: 23.619px;
+	left: 10px;
+	top: 41px;
+	overflow: visible;
+	transition: all 0.20000000298023224s linear;
+	--web-animation: fadein 0.20000000298023224s linear;
+	--web-action-type: page;
+	--web-action-target: index.html;
+	cursor: pointer;
+}
+#Icon_ionic-ios-arrow-back_dz {
+	fill: rgba(166,175,175,1);
+}
+.Icon_ionic-ios-arrow-back_dz {
+	overflow: visible;
+	position: absolute;
+	width: 13.503px;
+	height: 23.619px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#n__1__20 {
+	position: absolute;
+	width: 79.271px;
+	height: 14.59px;
+	left: 270.58px;
+	top: 2.41px;
+	overflow: visible;
+}
+#n_603 {
+	position: absolute;
+	width: 47.85px;
+	height: 14.59px;
+	left: 31.42px;
+	top: 0px;
+	overflow: visible;
+}
+#n_284 {
+	opacity: 0.9;
+	position: absolute;
+	width: 34.362px;
+	height: 14.59px;
+	left: 13.489px;
+	top: 0px;
+	overflow: visible;
+}
+#n_156 {
+	fill: transparent;
+}
+.n_156 {
+	position: absolute;
+	overflow: visible;
+	width: 34.361px;
+	height: 11.796px;
+	left: 0px;
+	top: 2.794px;
+}
+#n_230 {
+	left: 3.511px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 26px;
+	white-space: nowrap;
+	line-height: 14px;
+	margin-top: -2px;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 10px;
+	color: rgba(112,112,112,1);
+}
+#sysbar_battery {
+	position: absolute;
+	width: 14px;
+	height: 12px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#n_159 {
+	fill: transparent;
+}
+.n_159 {
+	position: absolute;
+	overflow: visible;
+	width: 14px;
+	height: 12px;
+	left: 0px;
+	top: 0px;
+}
+#n_80 {
+	opacity: 0.9;
+	fill: rgba(112,112,112,1);
+}
+.n_80 {
+	overflow: visible;
+	position: absolute;
+	width: 7.731px;
+	height: 10.321px;
+	left: 3.583px;
+	top: 0.794px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Icon_feather-wifi {
+	position: absolute;
+	width: 13.421px;
+	height: 9.516px;
+	left: 0px;
+	top: 1.537px;
+	overflow: visible;
+}
+#n_2148 {
+	fill: transparent;
+	stroke: rgba(112,112,112,1);
+	stroke-width: 2px;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.n_2148 {
+	overflow: visible;
+	position: absolute;
+	width: 11.011px;
+	height: 4.029px;
+	left: 2.647px;
+	top: 3.172px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#n_2149 {
+	fill: transparent;
+	stroke: rgba(112,112,112,1);
+	stroke-width: 2px;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.n_2149 {
+	overflow: visible;
+	position: absolute;
+	width: 16.243px;
+	height: 4.948px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#n_2150 {
+	fill: transparent;
+	stroke: rgba(112,112,112,1);
+	stroke-width: 2px;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.n_2150 {
+	overflow: visible;
+	position: absolute;
+	width: 7.888px;
+	height: 3.17px;
+	left: 4.144px;
+	top: 6.344px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#n_2151 {
+	fill: transparent;
+	stroke: rgba(112,112,112,1);
+	stroke-width: 2px;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.n_2151 {
+	overflow: visible;
+	position: absolute;
+	width: 2px;
+	height: 2px;
+	left: 6.71px;
+	top: 9.516px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#n_615 {
+	position: absolute;
+	width: 9px;
+	height: 8.973px;
+	left: 17.92px;
+	top: 1.004px;
+	overflow: visible;
+}
+#n_8 {
+	fill: transparent;
+	stroke: rgba(112,112,112,1);
+	stroke-width: 2px;
+	stroke-linejoin: miter;
+	stroke-linecap: round;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.n_8 {
+	overflow: visible;
+	position: absolute;
+	width: 2px;
+	height: 2.858px;
+	left: 0px;
+	top: 8.115px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#n_9 {
+	fill: transparent;
+	stroke: rgba(112,112,112,1);
+	stroke-width: 2px;
+	stroke-linejoin: miter;
+	stroke-linecap: round;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.n_9 {
+	overflow: visible;
+	position: absolute;
+	width: 2px;
+	height: 10.973px;
+	left: 9px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#n_10 {
+	fill: transparent;
+	stroke: rgba(112,112,112,1);
+	stroke-width: 2px;
+	stroke-linejoin: miter;
+	stroke-linecap: round;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.n_10 {
+	overflow: visible;
+	position: absolute;
+	width: 2px;
+	height: 5.433px;
+	left: 3px;
+	top: 5.541px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#n_11 {
+	fill: transparent;
+	stroke: rgba(112,112,112,1);
+	stroke-width: 2px;
+	stroke-linejoin: miter;
+	stroke-linecap: round;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.n_11 {
+	overflow: visible;
+	position: absolute;
+	width: 2px;
+	height: 8.399px;
+	left: 6px;
+	top: 2.575px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#n_10537 {
+	position: absolute;
+	width: 74px;
+	height: 40px;
+	left: 246px;
+	top: 268px;
+	overflow: visible;
+	transition: all 0.20000000298023224s linear;
+	--web-animation: fadein 0.20000000298023224s linear;
+	--web-action-type: page;
+	--web-action-target: _______4.html;
+	cursor: pointer;
+}
+/* #n_188 {
+	fill: rgba(116,251,207,1);
+}
+.n_188 {
+	position: absolute;
+	overflow: visible;
+	width: 74px;
+	height: 40px;
+	left: 0px;
+	top: 0px;
+}
+#n_30 {
+	fill: rgba(255,255,255,1);
+}
+.n_30 {
+	filter: drop-shadow(-1px 1px 6px rgba(0, 23, 19, 0.827));
+	position: absolute;
+	overflow: visible;
+	width: 54px;
+	height: 54px;
+	left: 36px;
+	top: 2px;
+} */
+
+/* 스위치 바깥 사이즈 조절 */
+/* .switch-button {
+    position: relative;
+    display: inline-block;
+    width: 74px;
+    height: 40px;
+   
+
+}
+
+.switch-button input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+/*스위치 on 상태
+.onoff-switch {
+    position: absolute;
+    cursor: pointer;
+    left: 250px;
+	top: 270px;
+
+    border-radius:20px;
+    background-color: #74FBCF;
+    -webkit-transition: .4s;
+    transition: .4s;
+    width: 74px;
+    height: 40px;
+} */
+
+/*스위치 off 상태의 동그라미*/
+/* .off-switch {
+    position: absolute;
+    content: "";
+    height: 32px;
+    width: 38px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #ffffff;
+    -webkit-transition: .5s;
+    transition: .4s;
+    border-radius:20px;
+} */
+
+/*스위치 on 상태의 동그라미 */
+/* .onoff-switch:before {
+    position: absolute;
+    content: "";
+    height: 32px;
+    width: 38px;
+    left: 32px;
+    bottom: 4px;
+    background-color: #ffffff;
+    -webkit-transition: .5s;
+    transition: .4s;
+    border-radius:20px;
+} */
+
+
+/*버튼 클릭 후 */
+/* .switch-button input:checked + .onoff-switch {
+    background-color: #D9D9D9;
+} */
+
+/* .switch-button input:checked + .onoff-switch:before {
+    -webkit-transform: translateX(50px);
+    -ms-transform: translateX(100px);
+    /*버튼 움직이는 길이
+    transform: translateX(-28px);
+} */
+
+
+/* 토글 스위치 스타일 */
+.toggle-switch {
+	display: inline-block;
+	position: relative;
+	left: 250px;
+	top: 270px;
+	width: 74px;
+	height: 40px;
+	border-radius: 30px;
+	background-color: #D9D9D9;
+	cursor: pointer;
+}
+
+.toggle-switch-knob {
+	position: absolute;
+	bottom: 4px;
+	left: 4px;
+	width: 38px;
+	height: 32px;
+	border-radius: 50%;
+	background-color: #fff;
+	transition: left 0.2s;
+}
+
+/* .toggle-switch.on {
+	background-color: #74FBCF;
+}
+
+.toggle-switch.on .toggle-switch-knob {
+	left: calc(100% - 26px - 2px);
+} */
+
+
+
+/* #n_211 {
+	fill: rgba(166,175,175,1);
+}
+.n_211 {
+	position: absolute;
+	overflow: visible;
+	width: 280px;
+	height: 8px;
+	left: 40px;
+	top: 194px;
+}
+#n_212 {
+	fill: rgba(116,251,207,1);
+}
+.n_212 {
+	position: absolute;
+	overflow: visible;
+	width: 34px;
+	height: 8px;
+	left: 40px;
+	top: 194px;
+}
+#n_40 {
+	fill: rgba(255,255,255,1);
+}
+.n_40 {
+	filter: drop-shadow(-1px 1px 6px rgba(0, 23, 19, 0.827));
+	position: absolute;
+	overflow: visible;
+	width: 52px;
+	height: 52px;
+	left: 40px;
+	top: 181px;
+}  */
+
+
+/* #range-slider {
+	width: 300px;
+} */
+

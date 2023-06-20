@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>환경설정 – 1</title>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="audio_information.css"/>
+<script id="applicationScript" type="text/javascript" src="audio_information.js"></script>
+</head>
+<body>
+	<div class="parent" onclick="slider_change()">
+		<input type="range" id="range-slider" name="range-slider" min="0" max="10" step="1">
+	</div>
+	
+
+	<script>
+		var load_slider_status = localStorage.getItem("slider_status");
+		var slider_status;
+
+		// input 요소 참조
+		var slider = document.querySelector('#range-slider');
+
+		// 변경할 값 입력하기
+		slider.value = 5;
+		
+		// 현재 값 가져오기
+		slider_status = slider.value;
+		
+		if(load_slider_status){
+			slider.value = parseInt(load_slider_status);			
+			slider_status = slider.value;
+			console.log(slider_status);
+		}
+		
+		localStorage.setItem("slider_status", slider_status);
+		function slider_change(){
+			slider_status = slider.value;
+			console.log("슬라이더" + slider_status);
+			localStorage.setItem("slider_status", slider_status);
+		}
+	</script>
+
+
+<div id="n__1">
+	<svg class="n_179">
+		<rect id="n_179" rx="20" ry="20" x="0" y="0" width="316" height="118">
+		</rect>
+	
+		</svg>
+	
+	
+	
+	<svg class="n_189">
+		<rect id="n_189" rx="20" ry="20" x="0" y="0" width="316" height="72">
+		</rect>
+	</svg>
+	<svg class="n_176">
+		<rect id="n_176" rx="0" ry="0" x="0" y="0" width="360" height="94">
+		</rect>
+	</svg>
+	<div id="Text">
+		<span>음성안내</span>
+	</div>
+	<div id="n_71">
+		<div id="n_">
+			<span>안내속도 조절</span>
+		</div>
+	</div>
+	<div id="n_74">
+		<div id="n__dx">
+			<span>음성안내</span>
+		</div>
+	</div>
+	<div onclick="application.goToTargetView(event)" id="Icon_ionic-ios-arrow-back">
+		<svg class="Icon_ionic-ios-arrow-back_dz" viewBox="11.251 6.194 13.503 23.619">
+			<path id="Icon_ionic-ios-arrow-back_dz" d="M 15.32109355926514 18 L 24.2578125 9.0703125 C 24.91875076293945 8.409375190734863 24.91875076293945 7.340624809265137 24.2578125 6.686718940734863 C 23.59687423706055 6.025781631469727 22.52812576293945 6.032812595367432 21.8671875 6.686718940734863 L 11.7421875 16.8046875 C 11.10234355926514 17.44453048706055 11.08828163146973 18.47109413146973 11.69296836853027 19.13203048706055 L 21.86015701293945 29.3203125 C 22.19062614440918 29.65078163146973 22.62656402587891 29.8125 23.05546951293945 29.8125 C 23.484375 29.8125 23.92031288146973 29.65078163146973 24.25078201293945 29.3203125 C 24.91172027587891 28.65937423706055 24.91172027587891 27.59062576293945 24.25078201293945 26.93671798706055 L 15.32109355926514 18 Z">
+			</path>
+		</svg>
+	</div>
+	<div id="n__1__20" class="______1___20">
+		<div id="n_603">
+			<div id="n_284">
+				<svg class="n_156">
+					<rect id="n_156" rx="0" ry="0" x="0" y="0" width="34.362" height="11.796">
+					</rect>
+				</svg>
+				<div id="n_230">
+					<span>12:30</span>
+				</div>
+			</div>
+			<div id="sysbar_battery">
+				<svg class="n_159">
+					<rect id="n_159" rx="0" ry="0" x="0" y="0" width="14" height="12">
+					</rect>
+				</svg>
+				<svg class="n_80" viewBox="42.8 1 7.731 10.321">
+					<path id="n_80" d="M 47.95423126220703 1.737242221832275 L 47.95423126220703 1 L 45.37711715698242 1 L 45.37711715698242 1.737242221832275 L 42.80000305175781 1.737242221832275 L 42.80000305175781 11.32139110565186 L 50.53134536743164 11.32139110565186 L 50.53134536743164 1.737242221832275 L 47.95423126220703 1.737242221832275 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div id="Icon_feather-wifi">
+			<svg class="n_2148" viewBox="7.5 15.003 8.186 1.617">
+				<path id="n_2148" d="M 7.5 16.61988639831543 C 9.871232032775879 14.46428489685059 13.31466579437256 14.46428680419922 15.6858959197998 16.61988830566406">
+				</path>
+			</svg>
+			<svg class="n_2149" viewBox="2.13 7.504 13.421 2.536">
+				<path id="n_2149" d="M 2.130000114440918 10.04040813446045 C 5.964924335479736 6.658497333526611 11.71561336517334 6.658499240875244 15.55053234100342 10.04041004180908">
+				</path>
+			</svg>
+			<svg class="n_2150" viewBox="12.795 22.502 5.139 0.704">
+				<path id="n_2150" d="M 12.79500007629395 23.20541381835938 C 14.33347225189209 22.26737403869629 16.39505386352539 22.26737594604492 17.93352508544922 23.20541572570801">
+				</path>
+			</svg>
+			<svg class="n_2151" viewBox="18 30 2 2">
+				<path id="n_2151" d="M 18 30 L 18 30">
+				</path>
+			</svg>
+		</div>
+		<div id="n_615">
+			<svg class="n_8" viewBox="0 0 2 0.858">
+				<path id="n_8" d="M 0 0.8582178950309753 L 0 0">
+				</path>
+			</svg>
+			<svg class="n_9" viewBox="0 0 2 8.973">
+				<path id="n_9" d="M 0 8.973363876342773 L 0 0">
+				</path>
+			</svg>
+			<svg class="n_10" viewBox="0 0 2 3.433">
+				<path id="n_10" d="M 0 3.432871580123901 L 0 0">
+				</path>
+			</svg>
+			<svg class="n_11" viewBox="0 0 2 6.399">
+				<path id="n_11" d="M 0 6.398709774017334 L 0 0">
+				</path>
+			</svg>
+		</div>
+	</div>
+
+	<!-- <div onclick="application.goToTargetView(event)" id="n_10537">
+		<svg class="n_188">
+			<rect id="n_188" rx="20" ry="20" x="0" y="0" width="74" height="40">
+			</rect>
+		</svg>
+		<svg class="n_30">
+			<ellipse id="n_30" rx="18" ry="18" cx="18" cy="18">
+			</ellipse>
+		</svg> onchange
+	</div> -->
+	<!-- <label onchange="on_off_change()" class="switch-button">
+		<input type="checkbox"/>
+			<span class="onoff-switch"></span>
+	</label> -->
+
+	
+	<div class="toggle-switch" onclick="on_off_change()">
+		<div class="toggle-switch-knob"></div>
+	</div>
+	
+	<script>
+		
+		var load_switch_status = localStorage.getItem("switch_status");
+		//var load_switch_left_status = localStorage.getItem("switch_left_status");
+
+		var switch_status = "on";
+		// if(load_switch_left_status === "32px"){
+		// 	switch_status = "on";
+		// }
+		// if(load_switch_left_status === "4px"){
+		// 	switch_status = "off";
+		// }
+
+		if(load_switch_status==="on"){
+			document.querySelector(".toggle-switch-knob").style.left = "32px";
+			document.querySelector(".toggle-switch").style.backgroundColor = "#74FBCF";
+			switch_status = "on";
+		}
+		if(load_switch_status==="off"){
+			document.querySelector(".toggle-switch-knob").style.left = "4px";
+			document.querySelector(".toggle-switch").style.backgroundColor = "#D9D9D9";
+			switch_status = "off";
+		};
+
+		localStorage.setItem("switch_status", switch_status);
+		//localStorage.setItem("switch_left_status", document.querySelector(".toggle-switch-knob").style.left);
+		function on_off_change(){
+			if(switch_status === "on"){
+				switch_status = "off";
+				document.querySelector(".toggle-switch").style.backgroundColor = "#D9D9D9";
+				document.querySelector(".toggle-switch-knob").style.left = "4px";
+				
+				console.log("스위치 off");
+				localStorage.setItem("switch_status", switch_status);
+				//localStorage.setItem("switch_left_status", document.querySelector(".toggle-switch-knob").style.left);
+
+			}else{ 	 //off상태
+				switch_status = "on";
+				document.querySelector(".toggle-switch").style.backgroundColor = "#74FBCF";
+				document.querySelector(".toggle-switch-knob").style.left = "32px";
+				
+				console.log("스위치 on");
+				localStorage.setItem("switch_status", switch_status);
+				//localStorage.setItem("switch_left_status", document.querySelector(".toggle-switch-knob").style.left);
+			};
+		};
+
+		
+		
+	</script>
+
+	<!-- <label for ="range-slider">범위 슬라이더:</label>
+	<input type="range" id="range-slider" name="range-slider" min ="0" max="10" step="1">
+
+	<script>
+        var slider = document.getElementById("range-slider");
+        slider.oninput = function() {
+            console.log(this.value); // 슬라이더 값이 변경될 때마다 콘솔에 출력
+        }
+    </script> -->
+	
+	<!-- <svg class="n_211">
+		<rect id="n_211" rx="4" ry="4" x="0" y="0" width="280" height="8">
+		</rect>
+	</svg>
+	<svg class="n_212">
+		<rect id="n_212" rx="4" ry="4" x="0" y="0" width="34" height="8">
+		</rect>
+	</svg>
+	<svg class="n_40">
+		<ellipse id="n_40" rx="17" ry="17" cx="17" cy="17">
+		</ellipse>
+	</svg> -->
+</div>
+	
+</body>
+</html>

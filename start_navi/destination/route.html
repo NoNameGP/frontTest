@@ -340,7 +340,7 @@
 										console.log("현재 위치:"+lat, lon);
 										// document.getElementById('test').innerText = "현재 위치:"+lat, lon;
 										distanceInKilometerByHaversine(0, lat, lon, point_lat_list[0], point_lon_list[0]); //사이거리
-										distanceInKilometerByHaversine(1, lat, lon, point_lat_list[0], point_lon_list[0]); //최종목적지 거리
+										distanceInKilometerByHaversine(1, lat, lon, load_destination_place_lat, load_destination_place_lon); //최종목적지 거리
 										function distanceInKilometerByHaversine(a, x1, y1, x2, y2) {
 											var distance; //키로미터
 											var radius = 6371; // 지구 반지름(km)
