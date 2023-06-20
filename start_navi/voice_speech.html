@@ -141,6 +141,22 @@
 </div>
 
 <script>
+	navigator.mediaDevices.getUserMedia({ audio: true })
+	  .then(function(stream) {
+		console.log('마이크 액세스 권한이 허용되었습니다.');
+		// 추가적인 처리 로직을 작성할 수 있습니다.
+	  })
+	  .catch(function(error) {
+		console.error('마이크 액세스 권한을 얻을 수 없습니다:', error);
+		// 오류 처리 로직을 작성할 수 있습니다.
+	  });
+	</script>
+	
+<script>
+
+	
+
+
 	var speech_word;
 	// Google Chrome and Microsoft Edge need vendor prefix 'webkit'
 	window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
