@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>목적지 설정 – 3-1 – 5</title>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="voice_speech_list.css"/>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://apis.openapi.sk.com/tmap/jsv2?version=1&appKey=teLyJMrEuK74jFpneHDklwmLLRcKiU0aXgNbLx8j"></script>
+<script id="applicationScript" type="text/javascript" src="voice_speech_list.js"></script>
+
+
+<body>
+	
+<div id="n___3-1__5">
+<!-- <input type="text" style="font-size: 20px;" id="searchKeyword" name="searchKeyword" value="텍스트를 입력하세요" onclick="clearText()"> -->
+
+
+	<div style="width: 100%; float:center; color: white;
+	position: relative;
+	top: 120px;
+	left: 30px">
+		<div class="rst_wrap">
+			<div class="rst mCustomScrollbar">
+				<ul id="searchResult" name="searchResult">
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+
+
+	
+	<div onclick="application.goToTargetView(event)" id="Icon_ionic-ios-arrow-back">
+		<svg class="Icon_ionic-ios-arrow-back_el" viewBox="11.251 6.194 13.503 23.619">
+			<path id="Icon_ionic-ios-arrow-back_el" d="M 15.32109355926514 18 L 24.2578125 9.0703125 C 24.91875076293945 8.409375190734863 24.91875076293945 7.340624809265137 24.2578125 6.686718940734863 C 23.59687423706055 6.025781631469727 22.52812576293945 6.032812595367432 21.8671875 6.686718940734863 L 11.7421875 16.8046875 C 11.10234355926514 17.44453048706055 11.08828163146973 18.47109413146973 11.69296836853027 19.13203048706055 L 21.86015701293945 29.3203125 C 22.19062614440918 29.65078163146973 22.62656402587891 29.8125 23.05546951293945 29.8125 C 23.484375 29.8125 23.92031288146973 29.65078163146973 24.25078201293945 29.3203125 C 24.91172027587891 28.65937423706055 24.91172027587891 27.59062576293945 24.25078201293945 26.93671798706055 L 15.32109355926514 18 Z">
+			</path>
+		</svg>
+	</div>
+	<div id="Text">
+		<span>검색 결과</span>
+	</div>
+	<div id="n__1__159" class="______1___159">
+		<div id="n_603">
+			<div id="n_284">
+				<svg class="n_156">
+					<rect id="n_156" rx="0" ry="0" x="0" y="0" width="34.362" height="11.796">
+					</rect>
+				</svg>
+				<div id="n_230">
+					<span>12:30</span>
+				</div>
+			</div>
+			<div id="sysbar_battery">
+				<svg class="n_159">
+					<rect id="n_159" rx="0" ry="0" x="0" y="0" width="14" height="12">
+					</rect>
+				</svg>
+				<svg class="n_80" viewBox="42.8 1 7.731 10.321">
+					<path id="n_80" d="M 47.95423126220703 1.737242221832275 L 47.95423126220703 1 L 45.37711715698242 1 L 45.37711715698242 1.737242221832275 L 42.80000305175781 1.737242221832275 L 42.80000305175781 11.32139110565186 L 50.53134536743164 11.32139110565186 L 50.53134536743164 1.737242221832275 L 47.95423126220703 1.737242221832275 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div id="Icon_feather-wifi">
+			<svg class="n_2148" viewBox="7.5 15.003 8.186 1.617">
+				<path id="n_2148" d="M 7.5 16.61988639831543 C 9.871232032775879 14.46428489685059 13.31466579437256 14.46428680419922 15.6858959197998 16.61988830566406">
+				</path>
+			</svg>
+			<svg class="n_2149" viewBox="2.13 7.504 13.421 2.536">
+				<path id="n_2149" d="M 2.130000114440918 10.04040813446045 C 5.964924335479736 6.658497333526611 11.71561336517334 6.658499240875244 15.55053234100342 10.04041004180908">
+				</path>
+			</svg>
+			<svg class="n_2150" viewBox="12.795 22.502 5.139 0.704">
+				<path id="n_2150" d="M 12.79500007629395 23.20541381835938 C 14.33347225189209 22.26737403869629 16.39505386352539 22.26737594604492 17.93352508544922 23.20541572570801">
+				</path>
+			</svg>
+			<svg class="n_2151" viewBox="18 30 2 2">
+				<path id="n_2151" d="M 18 30 L 18 30">
+				</path>
+			</svg>
+		</div>
+		<div id="n_615">
+			<svg class="n_8" viewBox="0 0 2 0.858">
+				<path id="n_8" d="M 0 0.8582178950309753 L 0 0">
+				</path>
+			</svg>
+			<svg class="n_9" viewBox="0 0 2 8.973">
+				<path id="n_9" d="M 0 8.973363876342773 L 0 0">
+				</path>
+			</svg>
+			<svg class="n_10" viewBox="0 0 2 3.433">
+				<path id="n_10" d="M 0 3.432871580123901 L 0 0">
+				</path>
+			</svg>
+			<svg class="n_11" viewBox="0 0 2 6.399">
+				<path id="n_11" d="M 0 6.398709774017334 L 0 0">
+				</path>
+			</svg>
+		</div>
+	</div>
+
+	
+	<div onclick="application.goToTargetView(event)" id="n_24_fu">
+		<svg class="n_7_fw">
+			<linearGradient id="n_7_fw" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+				<stop offset="0" stop-color="#93eaff" stop-opacity="1"></stop>
+				<stop offset="1" stop-color="#74fbcf" stop-opacity="1"></stop>
+			</linearGradient>
+			<rect id="n_7_fw" rx="25" ry="25" x="0" y="0" width="320" height="75">
+			</rect>
+		</svg>
+		<div id="n__fx">
+			<span>재시도</span>
+		</div>
+	</div>
+	
+	
+
+</div>
+
+<script>
+	var load_speech_word = localStorage.getItem("start_speech_word");
+	console.log(load_speech_word);
+
+	
+		var searchKeyword = load_speech_word
+		var headers = {}; 
+		headers["appKey"]="teLyJMrEuK74jFpneHDklwmLLRcKiU0aXgNbLx8j";
+
+		$.ajax({
+			method:"GET",
+			headers : headers,
+			url:"https://apis.openapi.sk.com/tmap/pois?version=1&format=json&callback=result",
+			async:false,
+			data:{
+				"searchKeyword" : searchKeyword,
+				"resCoordType" : "EPSG3857",
+				"reqCoordType" : "WGS84GEO",
+				"count" : 5
+			},
+			success:function(response){
+				var resultpoisData = response.searchPoiInfo.pois.poi;
+		
+				var innerHtml =""; 
+				
+					// Search Reulsts 결과값 노출 위한 변수
+
+				
+				for(var k in resultpoisData){
+					
+					var noorLat = Number(resultpoisData[k].noorLat);
+					var noorLon = Number(resultpoisData[k].noorLon);
+					var name = resultpoisData[k].name;
+					//console.log(name);
+
+					var id = resultpoisData[k].id;
+
+				// innerHtml += "<div class='result-item' style='border : 1px solid #ffffff; padding 100px; font-size : 20px;'> <style='vertical-align:middle;'/><span>"
+				// 							+name
+				// 							+"</span><button type = 'button' name='sendBtn' onClick='poiDetail("
+				// 							+ id
+				// 							+ ");'>.</button></div>";
+					
+				innerHtml += "<div onClick='poiDetail("
+								+id
+								+")'style='cursor: pointer;' ><div class='result-item' style='border : 1px solid #ffffff; padding 100px; font-size : 20px;'> <style='vertical-align:middle;'/><span>"
+								+name
+								+"</span></div></div>";
+
+					
+				}
+				
+				$("#searchResult").html(innerHtml);	//searchResult 결과값 노출
+				//map.panToBounds(positionBounds);	// 확장된 bounds의 중심으로 이동시키기
+				//map.zoomOut();
+				
+			},
+			error:function(request,status,error){
+				console.log("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+			}
+		});
+	
+	
+
+	function poiDetail(poiId) {
+				console.log(poiId);
+				var headers = {}; 
+				headers["appKey"]="teLyJMrEuK74jFpneHDklwmLLRcKiU0aXgNbLx8j";
+
+				$.ajax({
+					method : "GET", // 요청 방식
+					headers : headers,
+					url : "https://apis.openapi.sk.com/tmap/pois/"
+							+ poiId // 상세보기를 누른 아이템의 POI ID
+							+ "?version=1&resCoordType=EPSG3857&format=json&callback=result",
+					async : false, // 동기 설정
+					success : function(response) {
+						console.log(response);
+			
+						// 응답받은 POI 정보
+						var detailInfo = response.poiDetailInfo;
+						var name = detailInfo.name;
+						var address = detailInfo.address;
+			
+						var noorLat = Number(detailInfo.frontLat);
+						var noorLon = Number(detailInfo.frontLon);
+			
+						var pointCng = new Tmapv2.Point(noorLon, noorLat);
+						var projectionCng = new Tmapv2.Projection.convertEPSG3857ToWGS84GEO(
+								pointCng);
+			
+						var lat = projectionCng._lat;
+						var lon = projectionCng._lng;
+
+						localStorage.setItem("start_place_lat", lat);
+						localStorage.setItem("start_place_lon", lon);
+
+						
+					},
+					error : function(request, status, error) {
+						console.log("code:" + request.status + "\n"
+								+ "message:" + request.responseText + "\n"
+								+ "error:" + error);
+					}
+				});
+				location.replace("voice_speech_map.html");
+			}
+</script>
+
+</body>
+</html>
