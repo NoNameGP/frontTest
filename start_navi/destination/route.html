@@ -317,7 +317,8 @@
 							resultdrawArr.push(polyline_);
 						}
 
-
+					function aaa()
+					{
 						function moving(){
 							if (navigator.geolocation) {
 								navigator.geolocation.getCurrentPosition(
@@ -362,7 +363,7 @@
 												document.getElementById('test').innerText = "현재 위치:"+lat+ lon +"\n 사이거리:"+meter_distance+"m";
 											}
 
-											if(a==0 && meter_distance <= 8){
+											if(a==0 && meter_distance <= 12){
 												console.log("회전:"+meter_distance+"m 후"+point_turnType_list[0]);
 												document.getElementById('test').innerText = "회전:"+meter_distance+"m 후 \n"+point_turnType_list[0];
 
@@ -428,6 +429,7 @@
 							
 						}
 						setInterval(moving,1000);
+					}
 					});
 				}
 			}
@@ -504,7 +506,7 @@
 			<rect id="n_163" rx="0" ry="0" x="0" y="0" width="360" height="126">
 			</rect>
 		</svg>
-		<div id="n_">
+		<div onclick="aaa()" id="n_">
 			<span>경로 안내</span>
 		</div>
 		<div onclick="application.goToTargetView(event)" id="Icon_ionic-ios-arrow-back">
