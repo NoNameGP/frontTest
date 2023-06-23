@@ -1,3 +1,5 @@
+body {min-height : 100vh;}
+
 .mediaViewInfo {
 	--web-view-name: 목적지도착, 즐찾있는경우;
 	--web-view-id: n_;
@@ -17,8 +19,8 @@
 }
 #n_ {
 	position: absolute;
-	width: 360px;
-	height: 669px;
+	width: 100%;
+	height: 100%;
 	background-color: rgba(13,13,13,1);
 	overflow: hidden;
 	--web-view-name: 목적지도착, 즐찾있는경우;
@@ -28,10 +30,10 @@
 	--web-scale-on-resize: true;
 	--web-enable-deep-linking: true;
 }
-@keyframes  {
+/* @keyframes  {
 
 
-}
+} */
 #n__e {
 	left: 47px;
 	top: 228px;
