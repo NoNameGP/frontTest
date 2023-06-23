@@ -354,7 +354,8 @@
 											var squareRoot = Math.sqrt(sinDeltaLat * sinDeltaLat + Math.cos(x1*toRadian) * Math.cos(x2*toRadian) * sinDeltaLng * sinDeltaLng);
 
 											distance = 2 * radius * Math.asin(squareRoot);
-											meter_distance = Math.round(distance*1000);
+											//meter_distance = Math.round(distance*1000);
+											meter_distance =10;
 
 											console.log("사이거리:"+meter_distance+"m");
 
@@ -367,21 +368,26 @@
 												document.getElementById('test').innerText = "회전:"+meter_distance+"m 후 \n"+point_turnType_list[0];
 
 												var t = "회전:"+meter_distance+"m 후"+point_turnType_list[0];
+												ttt();
 
-												if(load_switch_status=="on"){
-													speech(t.value);
-													console.log("on");
-												}else{
-													console.log("off");
-												}
-													
-											// }
-											// if(meter_distance <= 3){
-											// 	console.log("회전:"+meter_distance+"m 후"+point_turnType_list[0]);
-												console.log("1포인트 제거!!!!");
-												point_lat_list.shift();
-												point_lon_list.shift();
-												point_turnType_list.shift();
+												function ttt(){
+													if(load_switch_status=="on"){
+														speech(t.value);
+														console.log("on");
+														document.getElementById('test').innerText += "on";
+													}else{
+														console.log("off");
+														document.getElementById('test').innerText += "off";
+													}
+														
+												// }
+												// if(meter_distance <= 3){
+												// 	console.log("회전:"+meter_distance+"m 후"+point_turnType_list[0]);
+													console.log("1포인트 제거!!!!");
+													point_lat_list.shift();
+													point_lon_list.shift();
+													point_turnType_list.shift();
+												}	
 											}
 
 											if(a==1 && meter_distance <= 8){
