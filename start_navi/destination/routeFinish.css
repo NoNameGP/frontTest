@@ -35,11 +35,14 @@ body {min-height : 100vh;}
 
 } */
 #n__e {
-	left: 47px;
-	top: 228px;
+	/* left: 47px;
+	top: 228px; */
 	position: absolute;
 	overflow: visible;
-	width: 267px;
+	/* width: 267px; */
+	width: calc(100% - 96px);
+	left: 13%;
+	top: 34%;
 	white-space: nowrap;
 	text-align: center;
 	font-family: Noto Sans KR;
@@ -50,14 +53,17 @@ body {min-height : 100vh;}
 }
 #n_16 {
 	position: absolute;
-	width: 320px;
+	/* width: 320px; */
 	height: 75px;
-	left: 20px;
-	top: 570px;
+	/* left: 20px;
+	top: 570px; */
+	width: calc(100% - 40px);
+	left: 6%;
+	top: 85%;
 	overflow: visible;
 	--web-animation: fadein undefineds undefined;
 	--web-action-type: page;
-	--web-action-target: _____________.html;
+	--web-action-target: ../../index.html;
 	cursor: pointer;
 }
 #n_7_e {
@@ -66,19 +72,24 @@ body {min-height : 100vh;}
 .n_7_e {
 	position: absolute;
 	overflow: visible;
-	width: 320px;
+	/* width: 320px; */
+	width: 100%;
 	height: 75px;
 	left: 0px;
 	top: 0px;
 }
 #Text {
-	left: 119.984px;
-	top: 22px;
+	/* left: 119.984px; */
+	/* top: 22px; */
+	left: 33%;
+	top: 33%;
 	position: absolute;
 	overflow: visible;
 	width: 82px;
+	width: calc(100% - 239.968px);
 	white-space: nowrap;
-	text-align: left;
+	/* text-align: left; */
+text-align: center;
 	font-family: Noto Sans KR;
 	font-style: normal;
 	font-weight: bold;
@@ -330,11 +341,14 @@ body {min-height : 100vh;}
 	transform: matrix(1,0,0,1,0,0);
 }
 #n__fr {
-	left: 104px;
-	top: 406px;
+	/* left: 104px;
+	top: 406px; */
 	position: absolute;
 	overflow: visible;
-	width: 153px;
+	/* width: 153px; */
+	width: calc(100% - 208px);
+	left: 29%;
+	top: 61%;
 	white-space: nowrap;
 	text-align: center;
 	font-family: Noto Sans KR;
@@ -349,9 +363,12 @@ body {min-height : 100vh;}
 .Icon_awesome-map-signs {
 	overflow: visible;
 	position: absolute;
-	width: 50px;
+	/* width: 50px; */
 	height: 50px;
-	left: 155px;
-	top: 306px;
+	/* left: 155px; */
+	/* top: 306px; */
 	transform: matrix(1,0,0,1,0,0);
+	width: calc(100% - 310px);
+	left: 43%;
+	top: 46%;
 }

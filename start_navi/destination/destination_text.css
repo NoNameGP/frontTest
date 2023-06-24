@@ -1,3 +1,47 @@
+#n_1234567890{
+	position: absolute;
+	/* width: 320px; */
+	width: calc(100% - 60px);
+	top : 30%;
+	left: 8%;
+	/* height: 75px; */
+	/* left: 20px; */
+	/* top: 570px; */
+	/* top : 85%; */
+	/* overflow: visible;
+	--web-animation: fadein undefineds undefined;
+	--web-action-type: page;
+	--web-action-target: _________3_1___6.html;
+	cursor: pointer; */
+}
+
+#rst_wrap{
+	width: 100%;
+}
+#n_0987654321{
+	width: 100%;
+	float: center;
+	color: white;
+	position: relative;
+
+
+	/* width: 320px; */
+	/* width: calc(100% - 60px);
+	top : 30%;
+	left: 8%; */
+	/* height: 75px; */
+	/* left: 20px; */
+	/* top: 570px; */
+	/* top : 85%; */
+	/* overflow: visible;
+	--web-animation: fadein undefineds undefined;
+	--web-action-type: page;
+	--web-action-target: _________3_1___6.html;
+	cursor: pointer; */
+
+}
+
+
 body {min-height : 100vh;}
 
 #new {
