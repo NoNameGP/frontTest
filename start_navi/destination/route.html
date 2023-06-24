@@ -30,6 +30,7 @@
 			// let point_lat_list=[];
 			// let point_lon_list=[];
 			// let timer;
+			var sound = 0;
 
 			
 			var load_slider_status = localStorage.getItem("slider_status");
@@ -364,6 +365,7 @@
 											}
 
 											if(a==0 && meter_distance <= 12){
+												sound = 1;
 												console.log("회전:"+meter_distance+"m 후"+point_turnType_list[0]);
 												document.getElementById('test').innerText = "회전:"+meter_distance+"m 후 \n"+point_turnType_list[0];
 
@@ -371,7 +373,7 @@
 												ttt();
 
 												function ttt(){
-													if(load_switch_status=="on"){
+													if(sound==1) {
 														speech(t.value);
 														console.log("on");
 														document.getElementById('test').innerText += "on";
