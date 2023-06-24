@@ -355,8 +355,8 @@
 											var squareRoot = Math.sqrt(sinDeltaLat * sinDeltaLat + Math.cos(x1*toRadian) * Math.cos(x2*toRadian) * sinDeltaLng * sinDeltaLng);
 
 											distance = 2 * radius * Math.asin(squareRoot);
-											//meter_distance = Math.round(distance*1000);
-											meter_distance =10;
+											meter_distance = Math.round(distance*1000);
+											//meter_distance =10;
 
 											console.log("사이거리:"+meter_distance+"m");
 
@@ -367,20 +367,20 @@
 											if(a==0 && meter_distance <= 12){
 												sound = 1;
 												console.log("회전:"+meter_distance+"m 후"+point_turnType_list[0]);
-												document.getElementById('test').innerText = "회전:"+meter_distance+"m 후 \n"+point_turnType_list[0];
+												document.getElementById('test').innerText = "회전:"+meter_distance+"m 후 \n"+turnType_dict[point_turnType_list[0]];
 
-												var t = "회전:"+meter_distance+"m 후"+point_turnType_list[0];
-												ttt();
+												// var t = "회전:"+meter_distance+"m 후"+point_turnType_list[0];
+												// ttt();
 
-												function ttt(){
-													if(sound==1) {
-														speech(t.value);
-														console.log("on");
-														document.getElementById('test').innerText += "on";
-													}else{
-														console.log("off");
-														document.getElementById('test').innerText += "off";
-													}
+												// function ttt(){
+												// 	if(sound==1) {
+												// 		speech(t.value);
+												// 		console.log("on");
+												// 		document.getElementById('test').innerText += "on";
+												// 	}else{
+												// 		console.log("off");
+												// 		document.getElementById('test').innerText += "off";
+												// 	}
 														
 												// }
 												// if(meter_distance <= 3){
@@ -389,7 +389,7 @@
 													point_lat_list.shift();
 													point_lon_list.shift();
 													point_turnType_list.shift();
-												}	
+												//}	
 											}
 
 											if(a==1 && meter_distance <= 8){
