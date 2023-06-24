@@ -9,6 +9,22 @@
 <script id="applicationScript" type="text/javascript" src="settingNew.js"></script>
 </head>
 <body>
+	<script>
+		function sendMsgUnity()
+		{
+			if(typeof Unity !=="undefined")
+			{
+				console.log("ok");
+				Unity.call("home");
+			}
+		}
+		function ClickButton()
+		{
+			sendMsgUnity();
+		}
+	
+		
+	</script>
 <div id="n__6">
 	<svg class="n_176">
 		<rect id="n_176" rx="0" ry="0" x="0" y="0" width="100%" height="100%">
@@ -54,7 +70,7 @@
 		</span> 
 	</div>
 
-	<div id="n__fw">
+	<div onclick = "ClickButton()" id="n__fw">
 		<span>김덕성 님</span>
 	</div>
 	<div id="Text_fx">
