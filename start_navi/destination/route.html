@@ -370,17 +370,17 @@
 												document.getElementById('test').innerText = "회전:"+meter_distance+"m 후 \n"+point_turnType_list[0];
 
 												var t = "회전:"+meter_distance+"m 후"+point_turnType_list[0];
-												// ttt();
+												ttt();
 
-												// function ttt(){
-												// 	if(sound==1) {
-												// 		speech(t.value);
-												// 		console.log("on");
-												// 		document.getElementById('test').innerText += "on";
-												// 	}else{
-												// 		console.log("off");
-												// 		document.getElementById('test').innerText += "off";
-												// 	}
+												function ttt(){
+													if(sound==1) {
+														speech(t.value);
+														console.log("on");
+														document.getElementById('test').innerText += "on";
+													}else{
+														console.log("off");
+														document.getElementById('test').innerText += "off";
+													}
 														
 												// }
 												// if(meter_distance <= 3){
@@ -389,7 +389,7 @@
 													point_lat_list.shift();
 													point_lon_list.shift();
 													point_turnType_list.shift();
-												//}	
+												}	
 											}
 
 											if(a==1 && meter_distance <= 8){

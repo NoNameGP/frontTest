@@ -7,12 +7,12 @@ let objects = [];
 let smiley;
 
 function setup() {
-  // createCanvas(320, 240);
+  createCanvas(320, 240);
   // createCanvas(400, 500);
-  createCanvas(windowWidth, windowHeight);
+  //createCanvas(windowWidth, windowHeight);
   video = createCapture(VIDEO);
-  // video.size(320, 240);
-  video.size(windowWidth, windowHeight - 132);
+  video.size(320, 240);
+  //video.size(windowWidth, windowHeight - 132);
 
   // YOLO
   yolo = ml5.YOLO(video, startDetecting);
@@ -26,7 +26,7 @@ function setup() {
 }
 
 function draw() {
-  image(video, 0, 123, width, height);
+  image(video, 0, 0, width, height);
   for (let i = 0; i < objects.length; i++) {
     if(objects === "car");
     noStroke();
