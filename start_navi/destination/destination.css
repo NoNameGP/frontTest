@@ -117,18 +117,33 @@ body {min-height : 100vh;}
 	color: rgba(25,25,25,1);
 }
 #n_57 {
-	position: absolute;
-	/* width: 296px; */
+	/* position: absolute;
+	width: 296px;
 	width: calc(100% - 64px);
 	height: 72px;
 	left: 32px;
-	/* top: 206px; */
+	top: 206px;
 	top : 31%;
 	overflow: visible;
 	transition: all 0.20000000298023224s linear;
 	--web-animation: fadein 0.20000000298023224s linear;
 	--web-action-type: page;
 	--web-action-target: destination_audio_1.html;
+	cursor: pointer; */
+
+
+	position: absolute;
+	/* width: 296px; */
+	height: 72px;
+	left: 32px;
+	/* top: 114px; */
+	width: calc(100% - 64px);
+	top : 17%;
+	overflow: visible;
+	transition: all 0.20000000298023224s linear;
+	--web-animation: fadein 0.20000000298023224s linear;
+	--web-action-type: page;
+	--web-action-target:destination_audio_1.html;
 	cursor: pointer;
 }
 #n_15_d {
@@ -161,19 +176,34 @@ body {min-height : 100vh;}
 	color: rgba(25,25,25,1);
 }
 #n_10525 {
-	position: absolute;
-	/* width: 296px; */
+	/* position: absolute;
+	width: 296px;
 	width: calc(100% - 64px);
 	height: 72px;
 	left: 32px;
-	/* top: 298px; */
+	top: 298px;
 	top : 45%;
 	overflow: visible;
 	transition: all 0.20000000298023224s ease-in-out;
 	--web-animation: fadein 0.20000000298023224s ease-in-out;
 	--web-action-type: page;
 	--web-action-target: destination_text.html;
+	cursor: pointer; */
+
+		position: absolute;
+	width: 296px;
+	width: calc(100% - 64px);
+	height: 72px;
+	left: 32px;
+	top: 206px;
+	top : 31%;
+	overflow: visible;
+	transition: all 0.20000000298023224s linear;
+	--web-animation: fadein 0.20000000298023224s linear;
+	--web-action-type: page;
+	--web-action-target:destination_text.html;
 	cursor: pointer;
+
 }
 #n_15_ea {
 	fill: rgba(216,255,247,1);
