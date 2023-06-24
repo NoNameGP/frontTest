@@ -233,7 +233,7 @@
 
 									if (geometry.type == "LineString") {
 										for (var j in geometry.coordinates) {
-											// 경로들의 결과값(구간)들을 포인트 객체로 변환 
+											// 경로들의 결     과값(구간)들을 포인트 객체로 변환 
 											var latlng = new Tmapv2.Point(geometry.coordinates[j][0],geometry.coordinates[j][1]);
 											// 포인트 객체를 받아 좌표값으로 변환
 											var convertPoint = new Tmapv2.Projection.convertEPSG3857ToWGS84GEO(latlng);
