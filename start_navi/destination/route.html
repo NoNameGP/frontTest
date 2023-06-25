@@ -364,7 +364,7 @@
 												document.getElementById('test').innerText = "현재 위치:"+lat+ lon +"\n 사이거리:"+meter_distance+"m";
 											}
 
-											if(a==0 && meter_distance <= 12){
+											if(a==0 && meter_distance <= 10){
 												sound = 1;
 												console.log("회전:"+meter_distance+"m 후"+point_turnType_list[0]);
 												document.getElementById('test').innerText = "회전:"+meter_distance+"m 후 \n"+turnType_dict[point_turnType_list[0]];
