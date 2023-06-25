@@ -14,7 +14,7 @@ body {min-height : 100vh;}
 	color: rgba(243, 243, 252, 0);
 	--web-animation: fadein undefineds undefined;
 	--web-action-type: page;
-	--web-action-target: index.html;
+	--web-action-target: destination.html;
 	cursor: pointer;
 }
 
