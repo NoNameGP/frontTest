@@ -114,5 +114,36 @@
 		</svg>
 	</div>
 </div>
+
+<script>
+	var load_background_status = localStorage.getItem("background_status");
+	console.log(load_background_status);
+	if (load_background_status==="white")
+	{
+	document.getElementById("n__14").style.backgroundColor = "White";
+	document.getElementById("n__jn").style.color = "#191919";
+	document.getElementById("n_").style.color = "#191919";
+	document.getElementById("n_D_").style.color = "#191919";
+	document.getElementById("n__jd").style.color = "#191919";
+	document.getElementById("n_176").style.fill = "#F3F3F3";
+	document.getElementById("n_7657").style.fill = "#F3F3FC"
+	document.getElementById("n_254").style.fill = "#F3F3FC"
+	document.getElementById("n_7659").style.fill = "#F3F3FC"
+	document.getElementById("n_7660").style.fill = "#F3F3FC"
+	}
+	if (load_background_status ==="Black"){
+	document.getElementById("n__14").style.backgroundColor = "rgba(13,13,13,1)";
+	document.getElementById("n__jn").style.color = "rgba(255,255,255,1)";
+	document.getElementById("n_").style.color = "rgba(255,255,255,1)";
+	document.getElementById("n_D_").style.color = "rgba(255,255,255,1)";
+	document.getElementById("n__jd").style.color = "rgba(255,255,255,1)";
+	document.getElementById("n_176").style.fill = "rgba(25,25,25,1)";
+	document.getElementById("n_7657").style.fill = "rgba(68,74,73,1)"
+	document.getElementById("n_254").style.fill = "rgba(68,74,73,1)"
+	document.getElementById("n_7659").style.fill = "rgba(68,74,73,1)"
+	document.getElementById("n_7660").style.fill = "rgba(68,74,73,1)"
+	}
+	
+	</script>
 </body>
 </html>

@@ -100,7 +100,7 @@ body{min-height: 100vh;;}
 #n_7657 {
 	fill: rgba(68,74,73,1);
 	stroke: rgba(147,251,255,1);
-	stroke-width: 0.5px;
+	stroke-width: 1px;
 	stroke-linejoin: miter;
 	stroke-linecap: butt;
 	stroke-miterlimit: 4;
@@ -137,7 +137,7 @@ body{min-height: 100vh;;}
 #n_254 {
 	fill: rgba(68,74,73,1);
 	stroke: rgba(147,251,255,1);
-	stroke-width: 0.5px;
+	stroke-width: 1px;
 	stroke-linejoin: miter;
 	stroke-linecap: butt;
 	stroke-miterlimit: 4;
@@ -192,7 +192,7 @@ body{min-height: 100vh;;}
 #n_7660 {
 	fill: rgba(68,74,73,1);
 	stroke: rgba(147,251,255,1);
-	stroke-width: 0.5px;
+	stroke-width: 1px;
 	stroke-linejoin: miter;
 	stroke-linecap: butt;
 	stroke-miterlimit: 4;
@@ -218,7 +218,7 @@ body{min-height: 100vh;;}
 	/* left: 213px;
 	top: 370px; */
 	left: 59%;
-	top: 55%;
+	top: 415px;
 	position: absolute;
 	overflow: visible;
 	width: 87px;
@@ -248,7 +248,7 @@ body{min-height: 100vh;;}
 #n_7659 {
 	fill: rgba(68,74,73,1);
 	stroke: rgba(147,251,255,1);
-	stroke-width: 0.5px;
+	stroke-width: 1px;
 	stroke-linejoin: miter;
 	stroke-linecap: butt;
 	stroke-miterlimit: 4;
@@ -274,7 +274,7 @@ body{min-height: 100vh;;}
 	/* left: 67px;
 	top: 370px; */
 	left: 19%;
-	top: 55%;
+	top: 415px;
 	position: absolute;
 	overflow: visible;
 	width: 74px;
