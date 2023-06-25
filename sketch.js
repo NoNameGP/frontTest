@@ -7,11 +7,11 @@ let objects = [];
 let smiley;
 
 function setup() {
-  createCanvas(320, 240);
+  createCanvas(360, 630);
   // createCanvas(400, 500);
   //createCanvas(windowWidth, windowHeight);
   video = createCapture(VIDEO);
-  video.size(320, 240);
+  video.size(360, 500);
   //video.size(windowWidth, windowHeight - 132);
 
   // YOLO
@@ -26,7 +26,7 @@ function setup() {
 }
 
 function draw() {
-  image(video, 0, 0, width, height);
+  image(video, 0, 130, width, height);
   for (let i = 0; i < objects.length; i++) {
     if(objects === "car");
     noStroke();
